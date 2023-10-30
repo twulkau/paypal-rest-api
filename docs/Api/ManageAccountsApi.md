@@ -1,6 +1,6 @@
-# PayPal\Rest-Api\ManageAccountsApi
+# PayPal\RestApi\ManageAccountsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://api-m.sandbox.paypal.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createManagedAccount**
-> createManagedAccount($prefer, $prefer2, $prefer3, $prefer4)
+> \PayPal\RestApi\Model\InlineResponse20113 createManagedAccount($prefer, $prefer2, $prefer3, $prefer4, $body)
 
 Create managed account
 
@@ -23,18 +23,20 @@ Creates a managed account. Submit the account information in the JSON request bo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\ManageAccountsApi(
+$apiInstance = new PayPal\RestApi\Api\ManageAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$prefer = new \stdClass; // object | (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links.
-$prefer2 = new \stdClass; // object | (Optional) The server returns a complete resource representation without process_view
-$prefer3 = new \stdClass; // object | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
-$prefer4 = new \stdClass; // object | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$prefer = "prefer_example"; // string | (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links.
+$prefer2 = "prefer_example"; // string | (Optional) The server returns a complete resource representation without process_view
+$prefer3 = "prefer_example"; // string | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$prefer4 = "prefer_example"; // string | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$body = new \PayPal\RestApi\Model\Body46(); // \PayPal\RestApi\Model\Body46 | 
 
 try {
-    $apiInstance->createManagedAccount($prefer, $prefer2, $prefer3, $prefer4);
+    $result = $apiInstance->createManagedAccount($prefer, $prefer2, $prefer3, $prefer4, $body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageAccountsApi->createManagedAccount: ', $e->getMessage(), PHP_EOL;
 }
@@ -45,14 +47,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prefer** | [**object**](../Model/.md)| (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links. | [optional]
- **prefer2** | [**object**](../Model/.md)| (Optional) The server returns a complete resource representation without process_view | [optional]
- **prefer3** | [**object**](../Model/.md)| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
- **prefer4** | [**object**](../Model/.md)| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **prefer** | **string**| (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links. | [optional]
+ **prefer2** | **string**| (Optional) The server returns a complete resource representation without process_view | [optional]
+ **prefer3** | **string**| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **prefer4** | **string**| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **body** | [**\PayPal\RestApi\Model\Body46**](../Model/Body46.md)|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\PayPal\RestApi\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
 
 ### Authorization
 
@@ -60,13 +63,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **partiallyUpdatesInformationForAManagedAccount**
-> partiallyUpdatesInformationForAManagedAccount($id, $prefer, $prefer2, $prefer3, $prefer4)
+> \PayPal\RestApi\Model\InlineResponse20047 partiallyUpdatesInformationForAManagedAccount($id, $prefer, $prefer2, $prefer3, $prefer4, $body)
 
 Partially updates information for a managed account
 
@@ -77,19 +80,21 @@ Partially updates information for a managed account, by account ID. For informat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\ManageAccountsApi(
+$apiInstance = new PayPal\RestApi\Api\ManageAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = new \stdClass; // object | The ID of the seller.
-$prefer = new \stdClass; // object | (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links.
-$prefer2 = new \stdClass; // object | (Optional) The server returns a complete resource representation without process_view
-$prefer3 = new \stdClass; // object | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
-$prefer4 = new \stdClass; // object | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$id = "id_example"; // string | The ID of the seller.
+$prefer = "prefer_example"; // string | (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links.
+$prefer2 = "prefer_example"; // string | (Optional) The server returns a complete resource representation without process_view
+$prefer3 = "prefer_example"; // string | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$prefer4 = "prefer_example"; // string | (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those.
+$body = array(new \PayPal\RestApi\Model\Body47()); // \PayPal\RestApi\Model\Body47[] | 
 
 try {
-    $apiInstance->partiallyUpdatesInformationForAManagedAccount($id, $prefer, $prefer2, $prefer3, $prefer4);
+    $result = $apiInstance->partiallyUpdatesInformationForAManagedAccount($id, $prefer, $prefer2, $prefer3, $prefer4, $body);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageAccountsApi->partiallyUpdatesInformationForAManagedAccount: ', $e->getMessage(), PHP_EOL;
 }
@@ -100,15 +105,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**object**](../Model/.md)| The ID of the seller. |
- **prefer** | [**object**](../Model/.md)| (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links. | [optional]
- **prefer2** | [**object**](../Model/.md)| (Optional) The server returns a complete resource representation without process_view | [optional]
- **prefer3** | [**object**](../Model/.md)| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
- **prefer4** | [**object**](../Model/.md)| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **id** | **string**| The ID of the seller. |
+ **prefer** | **string**| (Optional)The server returns a minimal response to optimize communication between the API caller and the server. A minimal response includes the account_id, external_id, and HATEOAS links. | [optional]
+ **prefer2** | **string**| (Optional) The server returns a complete resource representation without process_view | [optional]
+ **prefer3** | **string**| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **prefer4** | **string**| (Optional)The server returns complete resource representation along with process_view which includes policies information along with data/documents requirement to fulfill those. | [optional]
+ **body** | [**\PayPal\RestApi\Model\Body47[]**](../Model/Body47.md)|  | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\PayPal\RestApi\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -116,13 +122,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchManagedAccountBySellerId**
-> searchManagedAccountBySellerId($id, $views)
+> \PayPal\RestApi\Model\InlineResponse20046 searchManagedAccountBySellerId($id, $views)
 
 Search managed account by Seller Id
 
@@ -133,16 +139,17 @@ Shows details for a managed account, by account ID.  The detailed description fo
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\ManageAccountsApi(
+$apiInstance = new PayPal\RestApi\Api\ManageAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = new \stdClass; // object | The ID of the seller.
-$views = new \stdClass; // object | (Optional) The `views` query parameter can be used to request `process_view` in addition to the default GET response.
+$id = "id_example"; // string | The ID of the seller.
+$views = "views_example"; // string | (Optional) The `views` query parameter can be used to request `process_view` in addition to the default GET response.
 
 try {
-    $apiInstance->searchManagedAccountBySellerId($id, $views);
+    $result = $apiInstance->searchManagedAccountBySellerId($id, $views);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageAccountsApi->searchManagedAccountBySellerId: ', $e->getMessage(), PHP_EOL;
 }
@@ -153,12 +160,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**object**](../Model/.md)| The ID of the seller. |
- **views** | [**object**](../Model/.md)| (Optional) The &#x60;views&#x60; query parameter can be used to request &#x60;process_view&#x60; in addition to the default GET response. | [optional]
+ **id** | **string**| The ID of the seller. |
+ **views** | **string**| (Optional) The &#x60;views&#x60; query parameter can be used to request &#x60;process_view&#x60; in addition to the default GET response. | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\PayPal\RestApi\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 
@@ -167,12 +174,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchManagedAccountThroughExternalId**
-> searchManagedAccountThroughExternalId($external_id, $views)
+> \PayPal\RestApi\Model\InlineResponse20045 searchManagedAccountThroughExternalId($external_id, $views)
 
 Search managed account through external id
 
@@ -183,16 +190,17 @@ Show details for managed accounts, based on search criteria.  The detailed descr
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\ManageAccountsApi(
+$apiInstance = new PayPal\RestApi\Api\ManageAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$external_id = new \stdClass; // object | The `external_id` query parameter can be used to request managed accounts with the given external_id. Searches for the managed account that has the given external_id. To locate a particular account, you should set this to the same value that you provided in the /external_id property in your Create Managed Account request.
-$views = new \stdClass; // object | (Optional) The `views` query parameter can be used to request `process_view` in addition to the default GET response. A comma-separated list of data sets that should be returned in the response. The only allowed value here is process_view, which indicates that the process_view property should be populated in the response; this property contains information on the regulatory processes that must be completed for this merchant.
+$external_id = "external_id_example"; // string | The `external_id` query parameter can be used to request managed accounts with the given external_id. Searches for the managed account that has the given external_id. To locate a particular account, you should set this to the same value that you provided in the /external_id property in your Create Managed Account request.
+$views = "views_example"; // string | (Optional) The `views` query parameter can be used to request `process_view` in addition to the default GET response. A comma-separated list of data sets that should be returned in the response. The only allowed value here is process_view, which indicates that the process_view property should be populated in the response; this property contains information on the regulatory processes that must be completed for this merchant.
 
 try {
-    $apiInstance->searchManagedAccountThroughExternalId($external_id, $views);
+    $result = $apiInstance->searchManagedAccountThroughExternalId($external_id, $views);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageAccountsApi->searchManagedAccountThroughExternalId: ', $e->getMessage(), PHP_EOL;
 }
@@ -203,12 +211,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **external_id** | [**object**](../Model/.md)| The &#x60;external_id&#x60; query parameter can be used to request managed accounts with the given external_id. Searches for the managed account that has the given external_id. To locate a particular account, you should set this to the same value that you provided in the /external_id property in your Create Managed Account request. | [optional]
- **views** | [**object**](../Model/.md)| (Optional) The &#x60;views&#x60; query parameter can be used to request &#x60;process_view&#x60; in addition to the default GET response. A comma-separated list of data sets that should be returned in the response. The only allowed value here is process_view, which indicates that the process_view property should be populated in the response; this property contains information on the regulatory processes that must be completed for this merchant. | [optional]
+ **external_id** | **string**| The &#x60;external_id&#x60; query parameter can be used to request managed accounts with the given external_id. Searches for the managed account that has the given external_id. To locate a particular account, you should set this to the same value that you provided in the /external_id property in your Create Managed Account request. | [optional]
+ **views** | **string**| (Optional) The &#x60;views&#x60; query parameter can be used to request &#x60;process_view&#x60; in addition to the default GET response. A comma-separated list of data sets that should be returned in the response. The only allowed value here is process_view, which indicates that the process_view property should be populated in the response; this property contains information on the regulatory processes that must be completed for this merchant. | [optional]
 
 ### Return type
 
-void (empty response body)
+[**\PayPal\RestApi\Model\InlineResponse20045**](../Model/InlineResponse20045.md)
 
 ### Authorization
 
@@ -217,12 +225,12 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **showsCollectionOfRegisteredWalletDomains**
-> showsCollectionOfRegisteredWalletDomains($id)
+> \PayPal\RestApi\Model\InlineResponse20048 showsCollectionOfRegisteredWalletDomains($id)
 
 Shows collection of registered wallet domains
 
@@ -233,15 +241,16 @@ Shows collection of registered wallet domains  > Please look at sample (`200 - A
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\ManageAccountsApi(
+$apiInstance = new PayPal\RestApi\Api\ManageAccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$id = new \stdClass; // object | The ID of the seller.
+$id = "id_example"; // string | The ID of the seller.
 
 try {
-    $apiInstance->showsCollectionOfRegisteredWalletDomains($id);
+    $result = $apiInstance->showsCollectionOfRegisteredWalletDomains($id);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageAccountsApi->showsCollectionOfRegisteredWalletDomains: ', $e->getMessage(), PHP_EOL;
 }
@@ -252,11 +261,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**object**](../Model/.md)| The ID of the seller. |
+ **id** | **string**| The ID of the seller. |
 
 ### Return type
 
-void (empty response body)
+[**\PayPal\RestApi\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
 
 ### Authorization
 
@@ -265,7 +274,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "PayPal\\Rest-Api\\" : "paypal-rest-api/" }
+        "psr-4": { "PayPal\\RestApi\\" : "paypal-rest-api/" }
     },
     "autoload-dev": {
-        "psr-4": { "PayPal\\Rest-Api\\" : "test/" }
+        "psr-4": { "PayPal\\RestApi\\" : "test/" }
     }
 }

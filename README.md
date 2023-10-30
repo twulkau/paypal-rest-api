@@ -1,29 +1,33 @@
 # paypal-rest-api
-## Getting Started  
-### Step 1: Fork the collection using Run in Postman  
-[](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)  [![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)  
-### Step 2: Get your access token  
-An access token is automatically generated using a default `client_id` and `secret`. PayPal recommends using your own `client_id` and `secret` from the [Developer Dashboard](https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplication) by entering the values under the **Variables** tab. A pre-request script will generate and manage the `access_token` automatically.  
-> **Note:** Your developer account `client_id` and `secret` may have a different scope than the default `client_id` and `secret`.  
-### Step 3: Make your first API call  
-PayPal recommends starting with the Orders API. These steps will use the Orders API to create an order and capture payment using [sandbox accounts](https://developer.paypal.com/developer/accounts) linked to your Developer Dashboard account.  
-To create an order:  
-1. In your workspace, navigate to your fork of the PayPal collection. 
-2. Select **Orders > Create Order**. 
+# Getting Started
+## Step 1: Fork the collection using Run in Postman
+[](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)
+[![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24?action=collection/fork&collection-url=entityId=19024122-92a85d0e-51e7-47da-9f83-c45dcb1cdf24&entityType=collection&workspaceId=345300e6-346e-42e0-aed1-53717919aef0#?env[PayPal%20Override%20Env]=W3sia2V5IjoiUGxlYXNlIE5vdGUgLS0+IiwidmFsdWUiOiI8IFBheVBhbCBQdWJsaWMgQ29sbGVjdGlvbiBjb21lcyB3aXRoIGRlZmF1bHQgcHVibGljIHNldCBvZiBjcmVkZW50aWFscyBzdG9yZWQgYXQgdGhlIENvbGxlY3Rpb24gbGV2ZWwuIFxuVGhpcyBlbnZpcm9ubWVudCBvdmVycmlkZXMgdGhvc2UgZGVmYXVsdCB2YXJpYWJsZXMuIFlvdSBtYXkgYnJpbmcgeW91ciBvd24gY3JlZGVudGlhbHMgZnJvbSBQYXlQYWwgRGV2ZWxvcGVyIERhc2hib2FyZCBhbmQgcGFzdGUgdGhlbSBoZXJlLiBEbyBub3QgZm9yZ290IHRvIGVuYWJsZSB0aGUgdmFpYWJsZSBieSBjaGVja2luZyB0aGUgYm94IGFuZCBoaXQgXCJTYXZlXCIgYmVmb3JlIGludm9raW5nIHRoZSBQYXlQYWwgQVBJcy4gPiIsImVuYWJsZWQiOnRydWV9LHsia2V5IjoiY2xpZW50X2lkIiwidmFsdWUiOiI8IGNvcHkgY3JlZGVudGlhbHMgZnJvbSB5b3VyIGRldmVsb3Blci5wYXlwYWwuY29tIGFuZCBwYXN0ZSB0aGVtIGhlcmUgPiIsImVuYWJsZWQiOmZhbHNlfSx7ImtleSI6ImNsaWVudF9zZWNyZXQiLCJ2YWx1ZSI6IjwgY29weSBjcmVkZW50aWFscyBmcm9tIHlvdXIgZGV2ZWxvcGVyLnBheXBhbC5jb20gYW5kIHBhc3RlIHRoZW0gaGVyZSA+IiwiZW5hYmxlZCI6ZmFsc2V9XQ==)
+
+## Step 2: Get your access token
+An access token is automatically generated using a default `client_id` and `secret`. PayPal recommends using your own `client_id` and `secret` from the [Developer Dashboard](https://www.paypal.com/signin?intent=developer&returnUri=https%3A%2F%2Fdeveloper.paypal.com%2Fdeveloper%2Fapplication) by entering the values under the **Variables** tab. A pre-request script will generate and manage the `access_token` automatically.
+
+> **Note:** Your developer account `client_id` and `secret` may have a different scope than the default `client_id` and `secret`.
+
+## Step 3: Make your first API call
+PayPal recommends starting with the Orders API. These steps will use the Orders API to create an order and capture payment using [sandbox accounts](https://developer.paypal.com/developer/accounts) linked to your Developer Dashboard account.
+
+To create an order:
+1. In your workspace, navigate to your fork of the PayPal collection.
+2. Select **Orders > Create Order**.
 3. Select the **Send** button to create the order. On a successful call, the API returns a 201 order created response code. 
-4. In the response, find the **approve** link. 
-5. Open the **approve** link in a browser. 
-6. Log in with your Developer Dashboard Sandbox Personal Account credentials. You can find those credentials by logging into the Developer Dashboard and selecting **Sandbox > Account** 
-7. Select the **Continue** button. Payment has now been made.  To capture payment:  
-8. In the response of the order you created, find the `order_id`. 
-9. In the **Variables** tab, enter the `order_id` number. 
-10. Select **Orders > Capture payment for order**. 
-11. Select **Send**. On a successful call, the API returns a 201 order created response code.  
-12. Your order has been created and payment has been captured. You can verify the transaction in both the sandbox personal account and the sandbox business account.  ![Buyer Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-buyer.png) ![Seller Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-seller.png)
+4. In the response, find the **approve** link. 1. Open the **approve** link in a browser.
+5. Log in with your Developer Dashboard Sandbox Personal Account credentials. You can find those credentials by logging into the Developer Dashboard and selecting **Sandbox > Account**
+6. Select the **Continue** button. Payment has now been made.  To capture payment:  1. In the response of the order you created, find the `order_id`.
+7. In the **Variables** tab, enter the `order_id` number.
+8. Select **Orders > Capture payment for order**.
+9. Select **Send**. On a successful call, the API returns a 201 order created response code.  
+
+Your order has been created and payment has been captured. You can verify the transaction in both the sandbox personal account and the sandbox business account.  ![Buyer Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-buyer.png) ![Seller Payment Verification](https://www.paypalobjects.com/devdoc/transaction-details-seller.png)
 
 This PHP package is automatically generated by the [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) project:
 
-- API version: 1.0.0
+- API version: v2
 - Package version: v2
 - Build package: io.swagger.codegen.languages.PhpClientCodegen
 
@@ -77,14 +81,32 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new PayPal\Rest-Api\Api\AuthorizationApi(
+$apiInstance = new PayPal\RestApi\Api\AuthorizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$app_info = "app_info_example"; // string | 
+$claims = "claims_example"; // string | 
+$code = "code_example"; // string | 
+$device_info = "device_info_example"; // string | 
+$grant_type = "grant_type_example"; // string | 
+$ignore_cache = "ignore_cache_example"; // string | 
+$partner_client_id = "partner_client_id_example"; // string | 
+$redirect_uri = "redirect_uri_example"; // string | 
+$refresh_token = "refresh_token_example"; // string | 
+$response_type = "response_type_example"; // string | 
+$return_authn_schemes = "return_authn_schemes_example"; // string | 
+$return_client_metadata = "return_client_metadata_example"; // string | 
+$return_unconsented_scopes = "return_unconsented_scopes_example"; // string | 
+$risk_data = "risk_data_example"; // string | 
+$scope = "scope_example"; // string | 
+$target_client_id = "target_client_id_example"; // string | 
+$target_subject = "target_subject_example"; // string | 
 
 try {
-    $apiInstance->generateAccessToken();
+    $result = $apiInstance->generateAccessToken($app_info, $claims, $code, $device_info, $grant_type, $ignore_cache, $partner_client_id, $redirect_uri, $refresh_token, $response_type, $return_authn_schemes, $return_client_metadata, $return_unconsented_scopes, $risk_data, $scope, $target_client_id, $target_subject);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AuthorizationApi->generateAccessToken: ', $e->getMessage(), PHP_EOL;
 }
@@ -94,164 +116,976 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://api-m.sandbox.paypal.com*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*AuthorizationApi* | [**generateAccessToken**](docs/Api/AuthorizationApi.md#generateaccesstoken) | **POST** /v1/oauth2/token | Generate access_token
-*AuthorizationApi* | [**generateClientToken**](docs/Api/AuthorizationApi.md#generateclienttoken) | **POST** /v1/identity/generate-token | Generate client_token
-*AuthorizationApi* | [**terminateAccessToken**](docs/Api/AuthorizationApi.md#terminateaccesstoken) | **POST** /v1/oauth2/token/terminate | Terminate access_token
-*AuthorizationApi* | [**userInfo**](docs/Api/AuthorizationApi.md#userinfo) | **GET** /v1/identity/oauth2/userinfo | User Info
-*CatalogProductsApi* | [**listProducts**](docs/Api/CatalogProductsApi.md#listproducts) | **GET** /v1/catalogs/products | List products
-*CatalogProductsApi* | [**showProductDetails**](docs/Api/CatalogProductsApi.md#showproductdetails) | **GET** /v1/catalogs/products/{product_id} | Show product details
-*CatalogProductsApi* | [**updateProduct**](docs/Api/CatalogProductsApi.md#updateproduct) | **PATCH** /v1/catalogs/products/{product_id} | Update product
-*DisputesApi* | [**acceptClaim**](docs/Api/DisputesApi.md#acceptclaim) | **POST** /v1/customer/disputes/{dispute_id}/accept-claim | Accept claim
-*DisputesApi* | [**acceptOfferToResolveDispute**](docs/Api/DisputesApi.md#acceptoffertoresolvedispute) | **POST** /v1/customer/disputes/{dispute_id}/accept-offer | Accept offer to resolve dispute
-*DisputesApi* | [**acknowledgeReturnedItem**](docs/Api/DisputesApi.md#acknowledgereturneditem) | **POST** /v1/customer/disputes/{dispute_id}/acknowledge-return-item | Acknowledge returned item
-*DisputesApi* | [**appealDispute**](docs/Api/DisputesApi.md#appealdispute) | **POST** /v1/customer/disputes/{dispute_id}/appeal | Appeal dispute
-*DisputesApi* | [**denyOfferToResolveDispute**](docs/Api/DisputesApi.md#denyoffertoresolvedispute) | **POST** /v1/customer/disputes/{dispute_id}/deny-offer | Deny offer to resolve dispute
-*DisputesApi* | [**escalateDisputeToClaim**](docs/Api/DisputesApi.md#escalatedisputetoclaim) | **POST** /v1/customer/disputes/{dispute_id}/escalate | Escalate dispute to claim
-*DisputesApi* | [**listDisputes**](docs/Api/DisputesApi.md#listdisputes) | **GET** /v1/customer/disputes | List disputes
-*DisputesApi* | [**makeOfferToResolveDispute**](docs/Api/DisputesApi.md#makeoffertoresolvedispute) | **POST** /v1/customer/disputes/{dispute_id}/make-offer | Make offer to resolve dispute
-*DisputesApi* | [**partiallyUpdateDispute**](docs/Api/DisputesApi.md#partiallyupdatedispute) | **PATCH** /v1/customer/disputes/{dispute_id} | Partially update dispute
-*DisputesApi* | [**provideEvidence**](docs/Api/DisputesApi.md#provideevidence) | **POST** /v1/customer/disputes/{dispute_id}/provide-evidence | Provide evidence
-*DisputesApi* | [**provideSupportingInformationForDispute**](docs/Api/DisputesApi.md#providesupportinginformationfordispute) | **POST** /v1/customer/disputes/{dispute_id}/provide-supporting-info | Provide supporting information for dispute
-*DisputesApi* | [**sendMessageAboutDisputeToOtherParty**](docs/Api/DisputesApi.md#sendmessageaboutdisputetootherparty) | **POST** /v1/customer/disputes/{dispute_id}/send-message | Send message about dispute to other party
-*DisputesApi* | [**settleDispute**](docs/Api/DisputesApi.md#settledispute) | **POST** /v1/customer/disputes/{dispute_id}/adjudicate | Settle dispute
-*DisputesApi* | [**showDisputeDetails**](docs/Api/DisputesApi.md#showdisputedetails) | **GET** /v1/customer/disputes/{dispute_id} | Show dispute details
-*DisputesApi* | [**updateDisputeStatus**](docs/Api/DisputesApi.md#updatedisputestatus) | **POST** /v1/customer/disputes/{dispute_id}/require-evidence | Update dispute status
-*InvoicesApi* | [**cancelSentInvoice**](docs/Api/InvoicesApi.md#cancelsentinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/cancel | Cancel sent invoice
-*InvoicesApi* | [**createDraftInvoice**](docs/Api/InvoicesApi.md#createdraftinvoice) | **POST** /v2/invoicing/invoices | Create draft invoice
-*InvoicesApi* | [**createTemplate**](docs/Api/InvoicesApi.md#createtemplate) | **POST** /v2/invoicing/templates | Create template
-*InvoicesApi* | [**deleteExternalPayment**](docs/Api/InvoicesApi.md#deleteexternalpayment) | **DELETE** /v2/invoicing/invoices/{invoice_id}/payments/{transaction_id} | Delete external payment
-*InvoicesApi* | [**deleteExternalRefund**](docs/Api/InvoicesApi.md#deleteexternalrefund) | **DELETE** /v2/invoicing/invoices/{invoice_id}/refunds/{transaction_id} | Delete external refund
-*InvoicesApi* | [**deleteInvoice**](docs/Api/InvoicesApi.md#deleteinvoice) | **DELETE** /v2/invoicing/invoices/{invoice_id} | Delete invoice
-*InvoicesApi* | [**deleteTemplate**](docs/Api/InvoicesApi.md#deletetemplate) | **DELETE** /v2/invoicing/templates/{template_id} | Delete template
-*InvoicesApi* | [**fullyUpdateInvoice**](docs/Api/InvoicesApi.md#fullyupdateinvoice) | **PUT** /v2/invoicing/invoices/{invoice_id} | Fully update invoice
-*InvoicesApi* | [**fullyUpdateTemplate**](docs/Api/InvoicesApi.md#fullyupdatetemplate) | **PUT** /v2/invoicing/templates/{template_id} | Fully update template
-*InvoicesApi* | [**generateInvoiceNumber**](docs/Api/InvoicesApi.md#generateinvoicenumber) | **POST** /v2/invoicing/generate-next-invoice-number | Generate invoice number
-*InvoicesApi* | [**generateQrCode**](docs/Api/InvoicesApi.md#generateqrcode) | **POST** /v2/invoicing/invoices/{invoice_id}/generate-qr-code | Generate QR code
-*InvoicesApi* | [**listInvoices**](docs/Api/InvoicesApi.md#listinvoices) | **GET** /v2/invoicing/invoices | List invoices
-*InvoicesApi* | [**listTemplates**](docs/Api/InvoicesApi.md#listtemplates) | **GET** /v2/invoicing/templates | List templates
-*InvoicesApi* | [**recordPaymentForInvoice**](docs/Api/InvoicesApi.md#recordpaymentforinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/payments | Record payment for invoice
-*InvoicesApi* | [**recordRefundForInvoice**](docs/Api/InvoicesApi.md#recordrefundforinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/refunds | Record refund for invoice
-*InvoicesApi* | [**searchForInvoices**](docs/Api/InvoicesApi.md#searchforinvoices) | **POST** /v2/invoicing/search-invoices | Search for invoices
-*InvoicesApi* | [**sendInvoice**](docs/Api/InvoicesApi.md#sendinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/send | Send invoice
-*InvoicesApi* | [**sendInvoiceReminder**](docs/Api/InvoicesApi.md#sendinvoicereminder) | **POST** /v2/invoicing/invoices/{invoice_id}/remind | Send invoice reminder
-*InvoicesApi* | [**showInvoiceDetails**](docs/Api/InvoicesApi.md#showinvoicedetails) | **GET** /v2/invoicing/invoices/{invoice_id} | Show invoice details
-*InvoicesApi* | [**showTemplateDetails**](docs/Api/InvoicesApi.md#showtemplatedetails) | **GET** /v2/invoicing/templates/{template_id} | Show template details
-*Invoices1Api* | [**cancelSentInvoice**](docs/Api/Invoices1Api.md#cancelsentinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/cancel | Cancel sent invoice
-*Invoices1Api* | [**createDraftInvoice**](docs/Api/Invoices1Api.md#createdraftinvoice) | **POST** /v2/invoicing/invoices | Create draft invoice
-*Invoices1Api* | [**deleteExternalPayment**](docs/Api/Invoices1Api.md#deleteexternalpayment) | **DELETE** /v2/invoicing/invoices/{invoice_id}/payments/{transaction_id} | Delete external payment
-*Invoices1Api* | [**deleteExternalRefund**](docs/Api/Invoices1Api.md#deleteexternalrefund) | **DELETE** /v2/invoicing/invoices/{invoice_id}/refunds/{transaction_id} | Delete external refund
-*Invoices1Api* | [**deleteInvoice**](docs/Api/Invoices1Api.md#deleteinvoice) | **DELETE** /v2/invoicing/invoices/{invoice_id} | Delete invoice
-*Invoices1Api* | [**fullyUpdateInvoice**](docs/Api/Invoices1Api.md#fullyupdateinvoice) | **PUT** /v2/invoicing/invoices/{invoice_id} | Fully update invoice
-*Invoices1Api* | [**generateInvoiceNumber**](docs/Api/Invoices1Api.md#generateinvoicenumber) | **POST** /v2/invoicing/generate-next-invoice-number | Generate invoice number
-*Invoices1Api* | [**generateQrCode**](docs/Api/Invoices1Api.md#generateqrcode) | **POST** /v2/invoicing/invoices/{invoice_id}/generate-qr-code | Generate QR code
-*Invoices1Api* | [**listInvoices**](docs/Api/Invoices1Api.md#listinvoices) | **GET** /v2/invoicing/invoices | List invoices
-*Invoices1Api* | [**recordPaymentForInvoice**](docs/Api/Invoices1Api.md#recordpaymentforinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/payments | Record payment for invoice
-*Invoices1Api* | [**recordRefundForInvoice**](docs/Api/Invoices1Api.md#recordrefundforinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/refunds | Record refund for invoice
-*Invoices1Api* | [**searchForInvoices**](docs/Api/Invoices1Api.md#searchforinvoices) | **POST** /v2/invoicing/search-invoices | Search for invoices
-*Invoices1Api* | [**sendInvoice**](docs/Api/Invoices1Api.md#sendinvoice) | **POST** /v2/invoicing/invoices/{invoice_id}/send | Send invoice
-*Invoices1Api* | [**sendInvoiceReminder**](docs/Api/Invoices1Api.md#sendinvoicereminder) | **POST** /v2/invoicing/invoices/{invoice_id}/remind | Send invoice reminder
-*Invoices1Api* | [**showInvoiceDetails**](docs/Api/Invoices1Api.md#showinvoicedetails) | **GET** /v2/invoicing/invoices/{invoice_id} | Show invoice details
-*ManageAccountsApi* | [**createManagedAccount**](docs/Api/ManageAccountsApi.md#createmanagedaccount) | **POST** /v3/customer/managed-accounts | Create managed account
-*ManageAccountsApi* | [**partiallyUpdatesInformationForAManagedAccount**](docs/Api/ManageAccountsApi.md#partiallyupdatesinformationforamanagedaccount) | **PATCH** /v3/customer/managed-accounts/{id} | Partially updates information for a managed account
-*ManageAccountsApi* | [**searchManagedAccountBySellerId**](docs/Api/ManageAccountsApi.md#searchmanagedaccountbysellerid) | **GET** /v3/customer/managed-accounts/{id} | Search managed account by Seller Id
-*ManageAccountsApi* | [**searchManagedAccountThroughExternalId**](docs/Api/ManageAccountsApi.md#searchmanagedaccountthroughexternalid) | **GET** /v3/customer/managed-accounts | Search managed account through external id
-*ManageAccountsApi* | [**showsCollectionOfRegisteredWalletDomains**](docs/Api/ManageAccountsApi.md#showscollectionofregisteredwalletdomains) | **GET** /v3/customer/managed-accounts/{id}/wallet-domains | Shows collection of registered wallet domains
-*OnboardingLimitedReleaseApi* | [**createManagedAccount**](docs/Api/OnboardingLimitedReleaseApi.md#createmanagedaccount) | **POST** /v3/customer/managed-accounts | Create managed account
-*OnboardingLimitedReleaseApi* | [**partiallyUpdatesInformationForAManagedAccount**](docs/Api/OnboardingLimitedReleaseApi.md#partiallyupdatesinformationforamanagedaccount) | **PATCH** /v3/customer/managed-accounts/{id} | Partially updates information for a managed account
-*OnboardingLimitedReleaseApi* | [**searchManagedAccountBySellerId**](docs/Api/OnboardingLimitedReleaseApi.md#searchmanagedaccountbysellerid) | **GET** /v3/customer/managed-accounts/{id} | Search managed account by Seller Id
-*OnboardingLimitedReleaseApi* | [**searchManagedAccountThroughExternalId**](docs/Api/OnboardingLimitedReleaseApi.md#searchmanagedaccountthroughexternalid) | **GET** /v3/customer/managed-accounts | Search managed account through external id
-*OnboardingLimitedReleaseApi* | [**showsCollectionOfRegisteredWalletDomains**](docs/Api/OnboardingLimitedReleaseApi.md#showscollectionofregisteredwalletdomains) | **GET** /v3/customer/managed-accounts/{id}/wallet-domains | Shows collection of registered wallet domains
-*OrdersApi* | [**authorizePaymentForOrder**](docs/Api/OrdersApi.md#authorizepaymentfororder) | **POST** /v2/checkout/orders/{order_id}/authorize | Authorize payment for order
-*OrdersApi* | [**capturePaymentForOrder**](docs/Api/OrdersApi.md#capturepaymentfororder) | **POST** /v2/checkout/orders/{order_id}/capture | Capture payment for order
-*OrdersApi* | [**createOrder**](docs/Api/OrdersApi.md#createorder) | **POST** /v2/checkout/orders | Create order
-*OrdersApi* | [**showOrderDetails**](docs/Api/OrdersApi.md#showorderdetails) | **GET** /v2/checkout/orders/{order_id} | Show order details
-*OrdersApi* | [**updateOrder**](docs/Api/OrdersApi.md#updateorder) | **PATCH** /v2/checkout/orders/{order_id} | Update order
-*PaymentsApi* | [**captureAuthorizedPayment**](docs/Api/PaymentsApi.md#captureauthorizedpayment) | **POST** /v2/payments/authorizations/{authorization_id}/capture | Capture authorized payment
-*PaymentsApi* | [**reauthorizeAuthorizedPayment**](docs/Api/PaymentsApi.md#reauthorizeauthorizedpayment) | **POST** /v2/payments/authorizations/{authorization_id}/reauthorize | Reauthorize authorized payment
-*PaymentsApi* | [**refundCapturedPayment**](docs/Api/PaymentsApi.md#refundcapturedpayment) | **POST** /v2/payments/captures/{capture_id}/refund | Refund captured payment
-*PaymentsApi* | [**showCapturedPaymentDetails**](docs/Api/PaymentsApi.md#showcapturedpaymentdetails) | **GET** /v2/payments/captures/{capture_id} | Show captured payment details
-*PaymentsApi* | [**showDetailsForAuthorizedPayment**](docs/Api/PaymentsApi.md#showdetailsforauthorizedpayment) | **GET** /v2/payments/authorizations/{authorization_id} | Show details for authorized payment
-*PaymentsApi* | [**showRefundDetails**](docs/Api/PaymentsApi.md#showrefunddetails) | **GET** /v2/payments/refunds/{refund_id} | Show refund details
-*PaymentsApi* | [**voidAuthorizedPayment**](docs/Api/PaymentsApi.md#voidauthorizedpayment) | **POST** /v2/payments/authorizations/{authorization_id}/void | Void authorized payment
-*PayoutsApi* | [**cancelUnclaimedPayoutItem**](docs/Api/PayoutsApi.md#cancelunclaimedpayoutitem) | **POST** /v1/payments/payouts-item/{payout_item_id}/cancel | Cancel unclaimed payout item
-*PayoutsApi* | [**createBatchPayout**](docs/Api/PayoutsApi.md#createbatchpayout) | **POST** /v1/payments/payouts | Create batch payout
-*PayoutsApi* | [**showPayoutBatchDetails**](docs/Api/PayoutsApi.md#showpayoutbatchdetails) | **GET** /v1/payments/payouts/{payout_batch_id} | Show payout batch details
-*PayoutsApi* | [**showPayoutItemDetails**](docs/Api/PayoutsApi.md#showpayoutitemdetails) | **GET** /v1/payments/payouts-item/{payout_item_id} | Show payout item details
-*PlansApi* | [**activatePlan**](docs/Api/PlansApi.md#activateplan) | **POST** /v1/billing/plans/{billing_plan_id}/activate | Activate plan
-*PlansApi* | [**createPlan**](docs/Api/PlansApi.md#createplan) | **POST** /v1/billing/plans | Create plan
-*PlansApi* | [**deactivatePlan**](docs/Api/PlansApi.md#deactivateplan) | **POST** /v1/billing/plans/{billing_plan_id}/deactivate | Deactivate plan
-*PlansApi* | [**listPlans**](docs/Api/PlansApi.md#listplans) | **GET** /v1/billing/plans | List plans
-*PlansApi* | [**showPlanDetails**](docs/Api/PlansApi.md#showplandetails) | **GET** /v1/billing/plans/{billing_plan_id} | Show plan details
-*PlansApi* | [**updatePlan**](docs/Api/PlansApi.md#updateplan) | **PATCH** /v1/billing/plans/{billing_plan_id} | Update plan
-*PlansApi* | [**updatePricing**](docs/Api/PlansApi.md#updatepricing) | **POST** /v1/billing/plans/{billing_plan_id}/update-pricing-schemes | Update pricing
-*ShipmentTrackingApi* | [**addTrackingInformationForMultiplePaypalTransactions**](docs/Api/ShipmentTrackingApi.md#addtrackinginformationformultiplepaypaltransactions) | **POST** /v1/shipping/trackers-batch | Add tracking information for multiple PayPal transactions
-*ShipmentTrackingApi* | [**showTrackingInformation**](docs/Api/ShipmentTrackingApi.md#showtrackinginformation) | **GET** /v1/shipping/trackers/{tracking_id} | Show tracking information
-*ShipmentTrackingApi* | [**updateOrCancelTrackingInformationForPaypalTransaction**](docs/Api/ShipmentTrackingApi.md#updateorcanceltrackinginformationforpaypaltransaction) | **PUT** /v1/shipping/trackers/{tracking_id} | Update or cancel tracking information for PayPal transaction
-*SubscriptionsApi* | [**activatePlan**](docs/Api/SubscriptionsApi.md#activateplan) | **POST** /v1/billing/plans/{billing_plan_id}/activate | Activate plan
-*SubscriptionsApi* | [**activateSubscription**](docs/Api/SubscriptionsApi.md#activatesubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/activate | Activate subscription
-*SubscriptionsApi* | [**cancelSubscription**](docs/Api/SubscriptionsApi.md#cancelsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/cancel | Cancel subscription
-*SubscriptionsApi* | [**captureAuthorizedPaymentOnSubscription**](docs/Api/SubscriptionsApi.md#captureauthorizedpaymentonsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/capture | Capture authorized payment on subscription
-*SubscriptionsApi* | [**createPlan**](docs/Api/SubscriptionsApi.md#createplan) | **POST** /v1/billing/plans | Create plan
-*SubscriptionsApi* | [**createSubscription**](docs/Api/SubscriptionsApi.md#createsubscription) | **POST** /v1/billing/subscriptions | Create subscription
-*SubscriptionsApi* | [**deactivatePlan**](docs/Api/SubscriptionsApi.md#deactivateplan) | **POST** /v1/billing/plans/{billing_plan_id}/deactivate | Deactivate plan
-*SubscriptionsApi* | [**listPlans**](docs/Api/SubscriptionsApi.md#listplans) | **GET** /v1/billing/plans | List plans
-*SubscriptionsApi* | [**listProducts**](docs/Api/SubscriptionsApi.md#listproducts) | **GET** /v1/catalogs/products | List products
-*SubscriptionsApi* | [**listTransactionsForSubscription**](docs/Api/SubscriptionsApi.md#listtransactionsforsubscription) | **GET** /v1/billing/subscriptions/{subscription_id}/transactions | List transactions for subscription
-*SubscriptionsApi* | [**revisePlanOrQuantityOfSubscription**](docs/Api/SubscriptionsApi.md#reviseplanorquantityofsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/revise | Revise plan or quantity of subscription
-*SubscriptionsApi* | [**showPlanDetails**](docs/Api/SubscriptionsApi.md#showplandetails) | **GET** /v1/billing/plans/{billing_plan_id} | Show plan details
-*SubscriptionsApi* | [**showProductDetails**](docs/Api/SubscriptionsApi.md#showproductdetails) | **GET** /v1/catalogs/products/{product_id} | Show product details
-*SubscriptionsApi* | [**showSubscriptionDetails**](docs/Api/SubscriptionsApi.md#showsubscriptiondetails) | **GET** /v1/billing/subscriptions/{subscription_id} | Show subscription details
-*SubscriptionsApi* | [**suspendSubscription**](docs/Api/SubscriptionsApi.md#suspendsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/suspend | Suspend subscription
-*SubscriptionsApi* | [**updatePlan**](docs/Api/SubscriptionsApi.md#updateplan) | **PATCH** /v1/billing/plans/{billing_plan_id} | Update plan
-*SubscriptionsApi* | [**updatePricing**](docs/Api/SubscriptionsApi.md#updatepricing) | **POST** /v1/billing/plans/{billing_plan_id}/update-pricing-schemes | Update pricing
-*SubscriptionsApi* | [**updateProduct**](docs/Api/SubscriptionsApi.md#updateproduct) | **PATCH** /v1/catalogs/products/{product_id} | Update product
-*SubscriptionsApi* | [**updateSubscription**](docs/Api/SubscriptionsApi.md#updatesubscription) | **PATCH** /v1/billing/subscriptions/{subscription_id} | Update subscription
-*Subscriptions1Api* | [**activateSubscription**](docs/Api/Subscriptions1Api.md#activatesubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/activate | Activate subscription
-*Subscriptions1Api* | [**cancelSubscription**](docs/Api/Subscriptions1Api.md#cancelsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/cancel | Cancel subscription
-*Subscriptions1Api* | [**captureAuthorizedPaymentOnSubscription**](docs/Api/Subscriptions1Api.md#captureauthorizedpaymentonsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/capture | Capture authorized payment on subscription
-*Subscriptions1Api* | [**createSubscription**](docs/Api/Subscriptions1Api.md#createsubscription) | **POST** /v1/billing/subscriptions | Create subscription
-*Subscriptions1Api* | [**listTransactionsForSubscription**](docs/Api/Subscriptions1Api.md#listtransactionsforsubscription) | **GET** /v1/billing/subscriptions/{subscription_id}/transactions | List transactions for subscription
-*Subscriptions1Api* | [**revisePlanOrQuantityOfSubscription**](docs/Api/Subscriptions1Api.md#reviseplanorquantityofsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/revise | Revise plan or quantity of subscription
-*Subscriptions1Api* | [**showSubscriptionDetails**](docs/Api/Subscriptions1Api.md#showsubscriptiondetails) | **GET** /v1/billing/subscriptions/{subscription_id} | Show subscription details
-*Subscriptions1Api* | [**suspendSubscription**](docs/Api/Subscriptions1Api.md#suspendsubscription) | **POST** /v1/billing/subscriptions/{subscription_id}/suspend | Suspend subscription
-*Subscriptions1Api* | [**updateSubscription**](docs/Api/Subscriptions1Api.md#updatesubscription) | **PATCH** /v1/billing/subscriptions/{subscription_id} | Update subscription
-*TemplatesApi* | [**createTemplate**](docs/Api/TemplatesApi.md#createtemplate) | **POST** /v2/invoicing/templates | Create template
-*TemplatesApi* | [**deleteTemplate**](docs/Api/TemplatesApi.md#deletetemplate) | **DELETE** /v2/invoicing/templates/{template_id} | Delete template
-*TemplatesApi* | [**fullyUpdateTemplate**](docs/Api/TemplatesApi.md#fullyupdatetemplate) | **PUT** /v2/invoicing/templates/{template_id} | Fully update template
-*TemplatesApi* | [**listTemplates**](docs/Api/TemplatesApi.md#listtemplates) | **GET** /v2/invoicing/templates | List templates
-*TemplatesApi* | [**showTemplateDetails**](docs/Api/TemplatesApi.md#showtemplatedetails) | **GET** /v2/invoicing/templates/{template_id} | Show template details
-*TransactionSearchApi* | [**listAllBalances**](docs/Api/TransactionSearchApi.md#listallbalances) | **GET** /v1/reporting/balances | List all balances
-*TransactionSearchApi* | [**listTransactions**](docs/Api/TransactionSearchApi.md#listtransactions) | **GET** /v1/reporting/transactions | List transactions
-*WebhooksApi* | [**createWebhook**](docs/Api/WebhooksApi.md#createwebhook) | **POST** /v1/notifications/webhooks | Create webhook
-*WebhooksApi* | [**deleteWebhook**](docs/Api/WebhooksApi.md#deletewebhook) | **DELETE** /v1/notifications/webhooks/{webhook_id} | Delete webhook
-*WebhooksApi* | [**listAvailableEvents**](docs/Api/WebhooksApi.md#listavailableevents) | **GET** /v1/notifications/webhooks-event-types | List available events
-*WebhooksApi* | [**listEventNotifications**](docs/Api/WebhooksApi.md#listeventnotifications) | **GET** /v1/notifications/webhooks-events | List event notifications
-*WebhooksApi* | [**listEventSubscriptionsForWebhook**](docs/Api/WebhooksApi.md#listeventsubscriptionsforwebhook) | **GET** /v1/notifications/webhooks/{webhook_id}/event-types | List event subscriptions for webhook
-*WebhooksApi* | [**listWebhooks**](docs/Api/WebhooksApi.md#listwebhooks) | **GET** /v1/notifications/webhooks | List webhooks
-*WebhooksApi* | [**resendEventNotification**](docs/Api/WebhooksApi.md#resendeventnotification) | **POST** /v1/notifications/webhooks-events/{event_id}/resend | Resend event notification
-*WebhooksApi* | [**showEventNotificationDetails**](docs/Api/WebhooksApi.md#showeventnotificationdetails) | **GET** /v1/notifications/webhooks-events/{event_id} | Show event notification details
-*WebhooksApi* | [**showWebhookDetails**](docs/Api/WebhooksApi.md#showwebhookdetails) | **GET** /v1/notifications/webhooks/{webhook_id} | Show webhook details
-*WebhooksApi* | [**simulateWebhookEvent**](docs/Api/WebhooksApi.md#simulatewebhookevent) | **POST** /v1/notifications/simulate-event | Simulate webhook event
-*WebhooksApi* | [**triggerASampleEvent**](docs/Api/WebhooksApi.md#triggerasampleevent) | **POST** /v1/catalogs/products | Trigger a sample event
-*WebhooksApi* | [**updateWebhook**](docs/Api/WebhooksApi.md#updatewebhook) | **PATCH** /v1/notifications/webhooks/{webhook_id} | Update webhook
-*WebhooksApi* | [**verifyWebhookSignature**](docs/Api/WebhooksApi.md#verifywebhooksignature) | **POST** /v1/notifications/verify-webhook-signature | Verify webhook signature
-
+| Class                         | Method                                                                                                                                             | HTTP request                                                             | Description                                                  |
+|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------|
+| *AuthorizationApi*            | [**generateAccessToken**](docs/Api/AuthorizationApi.md#generateaccesstoken)                                                                        | **POST** /v1/oauth2/token                                                | Generate access_token                                        |
+| *AuthorizationApi*            | [**generateClientToken**](docs/Api/AuthorizationApi.md#generateclienttoken)                                                                        | **POST** /v1/identity/generate-token                                     | Generate client_token                                        |
+| *AuthorizationApi*            | [**terminateAccessToken**](docs/Api/AuthorizationApi.md#terminateaccesstoken)                                                                      | **POST** /v1/oauth2/token/terminate                                      | Terminate access_token                                       |
+| *AuthorizationApi*            | [**userInfo**](docs/Api/AuthorizationApi.md#userinfo)                                                                                              | **GET** /v1/identity/oauth2/userinfo                                     | User Info                                                    |
+| *CatalogProductsApi*          | [**listProducts**](docs/Api/CatalogProductsApi.md#listproducts)                                                                                    | **GET** /v1/catalogs/products                                            | List products                                                |
+| *CatalogProductsApi*          | [**showProductDetails**](docs/Api/CatalogProductsApi.md#showproductdetails)                                                                        | **GET** /v1/catalogs/products/{product_id}                               | Show product details                                         |
+| *CatalogProductsApi*          | [**updateProduct**](docs/Api/CatalogProductsApi.md#updateproduct)                                                                                  | **PATCH** /v1/catalogs/products/{product_id}                             | Update product                                               |
+| *DisputesApi*                 | [**acceptClaim**](docs/Api/DisputesApi.md#acceptclaim)                                                                                             | **POST** /v1/customer/disputes/{dispute_id}/accept-claim                 | Accept claim                                                 |
+| *DisputesApi*                 | [**acceptOfferToResolveDispute**](docs/Api/DisputesApi.md#acceptoffertoresolvedispute)                                                             | **POST** /v1/customer/disputes/{dispute_id}/accept-offer                 | Accept offer to resolve dispute                              |
+| *DisputesApi*                 | [**acknowledgeReturnedItem**](docs/Api/DisputesApi.md#acknowledgereturneditem)                                                                     | **POST** /v1/customer/disputes/{dispute_id}/acknowledge-return-item      | Acknowledge returned item                                    |
+| *DisputesApi*                 | [**appealDispute**](docs/Api/DisputesApi.md#appealdispute)                                                                                         | **POST** /v1/customer/disputes/{dispute_id}/appeal                       | Appeal dispute                                               |
+| *DisputesApi*                 | [**denyOfferToResolveDispute**](docs/Api/DisputesApi.md#denyoffertoresolvedispute)                                                                 | **POST** /v1/customer/disputes/{dispute_id}/deny-offer                   | Deny offer to resolve dispute                                |
+| *DisputesApi*                 | [**escalateDisputeToClaim**](docs/Api/DisputesApi.md#escalatedisputetoclaim)                                                                       | **POST** /v1/customer/disputes/{dispute_id}/escalate                     | Escalate dispute to claim                                    |
+| *DisputesApi*                 | [**listDisputes**](docs/Api/DisputesApi.md#listdisputes)                                                                                           | **GET** /v1/customer/disputes                                            | List disputes                                                |
+| *DisputesApi*                 | [**makeOfferToResolveDispute**](docs/Api/DisputesApi.md#makeoffertoresolvedispute)                                                                 | **POST** /v1/customer/disputes/{dispute_id}/make-offer                   | Make offer to resolve dispute                                |
+| *DisputesApi*                 | [**partiallyUpdateDispute**](docs/Api/DisputesApi.md#partiallyupdatedispute)                                                                       | **PATCH** /v1/customer/disputes/{dispute_id}                             | Partially update dispute                                     |
+| *DisputesApi*                 | [**provideEvidence**](docs/Api/DisputesApi.md#provideevidence)                                                                                     | **POST** /v1/customer/disputes/{dispute_id}/provide-evidence             | Provide evidence                                             |
+| *DisputesApi*                 | [**provideSupportingInformationForDispute**](docs/Api/DisputesApi.md#providesupportinginformationfordispute)                                       | **POST** /v1/customer/disputes/{dispute_id}/provide-supporting-info      | Provide supporting information for dispute                   |
+| *DisputesApi*                 | [**sendMessageAboutDisputeToOtherParty**](docs/Api/DisputesApi.md#sendmessageaboutdisputetootherparty)                                             | **POST** /v1/customer/disputes/{dispute_id}/send-message                 | Send message about dispute to other party                    |
+| *DisputesApi*                 | [**settleDispute**](docs/Api/DisputesApi.md#settledispute)                                                                                         | **POST** /v1/customer/disputes/{dispute_id}/adjudicate                   | Settle dispute                                               |
+| *DisputesApi*                 | [**showDisputeDetails**](docs/Api/DisputesApi.md#showdisputedetails)                                                                               | **GET** /v1/customer/disputes/{dispute_id}                               | Show dispute details                                         |
+| *DisputesApi*                 | [**updateDisputeStatus**](docs/Api/DisputesApi.md#updatedisputestatus)                                                                             | **POST** /v1/customer/disputes/{dispute_id}/require-evidence             | Update dispute status                                        |
+| *InvoicesApi*                 | [**cancelSentInvoice**](docs/Api/InvoicesApi.md#cancelsentinvoice)                                                                                 | **POST** /v2/invoicing/invoices/{invoice_id}/cancel                      | Cancel sent invoice                                          |
+| *InvoicesApi*                 | [**createDraftInvoice**](docs/Api/InvoicesApi.md#createdraftinvoice)                                                                               | **POST** /v2/invoicing/invoices                                          | Create draft invoice                                         |
+| *InvoicesApi*                 | [**createTemplate**](docs/Api/InvoicesApi.md#createtemplate)                                                                                       | **POST** /v2/invoicing/templates                                         | Create template                                              |
+| *InvoicesApi*                 | [**deleteExternalPayment**](docs/Api/InvoicesApi.md#deleteexternalpayment)                                                                         | **DELETE** /v2/invoicing/invoices/{invoice_id}/payments/{transaction_id} | Delete external payment                                      |
+| *InvoicesApi*                 | [**deleteExternalRefund**](docs/Api/InvoicesApi.md#deleteexternalrefund)                                                                           | **DELETE** /v2/invoicing/invoices/{invoice_id}/refunds/{transaction_id}  | Delete external refund                                       |
+| *InvoicesApi*                 | [**deleteInvoice**](docs/Api/InvoicesApi.md#deleteinvoice)                                                                                         | **DELETE** /v2/invoicing/invoices/{invoice_id}                           | Delete invoice                                               |
+| *InvoicesApi*                 | [**deleteTemplate**](docs/Api/InvoicesApi.md#deletetemplate)                                                                                       | **DELETE** /v2/invoicing/templates/{template_id}                         | Delete template                                              |
+| *InvoicesApi*                 | [**fullyUpdateInvoice**](docs/Api/InvoicesApi.md#fullyupdateinvoice)                                                                               | **PUT** /v2/invoicing/invoices/{invoice_id}                              | Fully update invoice                                         |
+| *InvoicesApi*                 | [**fullyUpdateTemplate**](docs/Api/InvoicesApi.md#fullyupdatetemplate)                                                                             | **PUT** /v2/invoicing/templates/{template_id}                            | Fully update template                                        |
+| *InvoicesApi*                 | [**generateInvoiceNumber**](docs/Api/InvoicesApi.md#generateinvoicenumber)                                                                         | **POST** /v2/invoicing/generate-next-invoice-number                      | Generate invoice number                                      |
+| *InvoicesApi*                 | [**generateQrCode**](docs/Api/InvoicesApi.md#generateqrcode)                                                                                       | **POST** /v2/invoicing/invoices/{invoice_id}/generate-qr-code            | Generate QR code                                             |
+| *InvoicesApi*                 | [**listInvoices**](docs/Api/InvoicesApi.md#listinvoices)                                                                                           | **GET** /v2/invoicing/invoices                                           | List invoices                                                |
+| *InvoicesApi*                 | [**listTemplates**](docs/Api/InvoicesApi.md#listtemplates)                                                                                         | **GET** /v2/invoicing/templates                                          | List templates                                               |
+| *InvoicesApi*                 | [**recordPaymentForInvoice**](docs/Api/InvoicesApi.md#recordpaymentforinvoice)                                                                     | **POST** /v2/invoicing/invoices/{invoice_id}/payments                    | Record payment for invoice                                   |
+| *InvoicesApi*                 | [**recordRefundForInvoice**](docs/Api/InvoicesApi.md#recordrefundforinvoice)                                                                       | **POST** /v2/invoicing/invoices/{invoice_id}/refunds                     | Record refund for invoice                                    |
+| *InvoicesApi*                 | [**searchForInvoices**](docs/Api/InvoicesApi.md#searchforinvoices)                                                                                 | **POST** /v2/invoicing/search-invoices                                   | Search for invoices                                          |
+| *InvoicesApi*                 | [**sendInvoice**](docs/Api/InvoicesApi.md#sendinvoice)                                                                                             | **POST** /v2/invoicing/invoices/{invoice_id}/send                        | Send invoice                                                 |
+| *InvoicesApi*                 | [**sendInvoiceReminder**](docs/Api/InvoicesApi.md#sendinvoicereminder)                                                                             | **POST** /v2/invoicing/invoices/{invoice_id}/remind                      | Send invoice reminder                                        |
+| *InvoicesApi*                 | [**showInvoiceDetails**](docs/Api/InvoicesApi.md#showinvoicedetails)                                                                               | **GET** /v2/invoicing/invoices/{invoice_id}                              | Show invoice details                                         |
+| *InvoicesApi*                 | [**showTemplateDetails**](docs/Api/InvoicesApi.md#showtemplatedetails)                                                                             | **GET** /v2/invoicing/templates/{template_id}                            | Show template details                                        |
+| *Invoices1Api*                | [**cancelSentInvoice**](docs/Api/Invoices1Api.md#cancelsentinvoice)                                                                                | **POST** /v2/invoicing/invoices/{invoice_id}/cancel                      | Cancel sent invoice                                          |
+| *Invoices1Api*                | [**createDraftInvoice**](docs/Api/Invoices1Api.md#createdraftinvoice)                                                                              | **POST** /v2/invoicing/invoices                                          | Create draft invoice                                         |
+| *Invoices1Api*                | [**deleteExternalPayment**](docs/Api/Invoices1Api.md#deleteexternalpayment)                                                                        | **DELETE** /v2/invoicing/invoices/{invoice_id}/payments/{transaction_id} | Delete external payment                                      |
+| *Invoices1Api*                | [**deleteExternalRefund**](docs/Api/Invoices1Api.md#deleteexternalrefund)                                                                          | **DELETE** /v2/invoicing/invoices/{invoice_id}/refunds/{transaction_id}  | Delete external refund                                       |
+| *Invoices1Api*                | [**deleteInvoice**](docs/Api/Invoices1Api.md#deleteinvoice)                                                                                        | **DELETE** /v2/invoicing/invoices/{invoice_id}                           | Delete invoice                                               |
+| *Invoices1Api*                | [**fullyUpdateInvoice**](docs/Api/Invoices1Api.md#fullyupdateinvoice)                                                                              | **PUT** /v2/invoicing/invoices/{invoice_id}                              | Fully update invoice                                         |
+| *Invoices1Api*                | [**generateInvoiceNumber**](docs/Api/Invoices1Api.md#generateinvoicenumber)                                                                        | **POST** /v2/invoicing/generate-next-invoice-number                      | Generate invoice number                                      |
+| *Invoices1Api*                | [**generateQrCode**](docs/Api/Invoices1Api.md#generateqrcode)                                                                                      | **POST** /v2/invoicing/invoices/{invoice_id}/generate-qr-code            | Generate QR code                                             |
+| *Invoices1Api*                | [**listInvoices**](docs/Api/Invoices1Api.md#listinvoices)                                                                                          | **GET** /v2/invoicing/invoices                                           | List invoices                                                |
+| *Invoices1Api*                | [**recordPaymentForInvoice**](docs/Api/Invoices1Api.md#recordpaymentforinvoice)                                                                    | **POST** /v2/invoicing/invoices/{invoice_id}/payments                    | Record payment for invoice                                   |
+| *Invoices1Api*                | [**recordRefundForInvoice**](docs/Api/Invoices1Api.md#recordrefundforinvoice)                                                                      | **POST** /v2/invoicing/invoices/{invoice_id}/refunds                     | Record refund for invoice                                    |
+| *Invoices1Api*                | [**searchForInvoices**](docs/Api/Invoices1Api.md#searchforinvoices)                                                                                | **POST** /v2/invoicing/search-invoices                                   | Search for invoices                                          |
+| *Invoices1Api*                | [**sendInvoice**](docs/Api/Invoices1Api.md#sendinvoice)                                                                                            | **POST** /v2/invoicing/invoices/{invoice_id}/send                        | Send invoice                                                 |
+| *Invoices1Api*                | [**sendInvoiceReminder**](docs/Api/Invoices1Api.md#sendinvoicereminder)                                                                            | **POST** /v2/invoicing/invoices/{invoice_id}/remind                      | Send invoice reminder                                        |
+| *Invoices1Api*                | [**showInvoiceDetails**](docs/Api/Invoices1Api.md#showinvoicedetails)                                                                              | **GET** /v2/invoicing/invoices/{invoice_id}                              | Show invoice details                                         |
+| *ManageAccountsApi*           | [**createManagedAccount**](docs/Api/ManageAccountsApi.md#createmanagedaccount)                                                                     | **POST** /v3/customer/managed-accounts                                   | Create managed account                                       |
+| *ManageAccountsApi*           | [**partiallyUpdatesInformationForAManagedAccount**](docs/Api/ManageAccountsApi.md#partiallyupdatesinformationforamanagedaccount)                   | **PATCH** /v3/customer/managed-accounts/{id}                             | Partially updates information for a managed account          |
+| *ManageAccountsApi*           | [**searchManagedAccountBySellerId**](docs/Api/ManageAccountsApi.md#searchmanagedaccountbysellerid)                                                 | **GET** /v3/customer/managed-accounts/{id}                               | Search managed account by Seller Id                          |
+| *ManageAccountsApi*           | [**searchManagedAccountThroughExternalId**](docs/Api/ManageAccountsApi.md#searchmanagedaccountthroughexternalid)                                   | **GET** /v3/customer/managed-accounts                                    | Search managed account through external id                   |
+| *ManageAccountsApi*           | [**showsCollectionOfRegisteredWalletDomains**](docs/Api/ManageAccountsApi.md#showscollectionofregisteredwalletdomains)                             | **GET** /v3/customer/managed-accounts/{id}/wallet-domains                | Shows collection of registered wallet domains                |
+| *OnboardingLimitedReleaseApi* | [**createManagedAccount**](docs/Api/OnboardingLimitedReleaseApi.md#createmanagedaccount)                                                           | **POST** /v3/customer/managed-accounts                                   | Create managed account                                       |
+| *OnboardingLimitedReleaseApi* | [**partiallyUpdatesInformationForAManagedAccount**](docs/Api/OnboardingLimitedReleaseApi.md#partiallyupdatesinformationforamanagedaccount)         | **PATCH** /v3/customer/managed-accounts/{id}                             | Partially updates information for a managed account          |
+| *OnboardingLimitedReleaseApi* | [**searchManagedAccountBySellerId**](docs/Api/OnboardingLimitedReleaseApi.md#searchmanagedaccountbysellerid)                                       | **GET** /v3/customer/managed-accounts/{id}                               | Search managed account by Seller Id                          |
+| *OnboardingLimitedReleaseApi* | [**searchManagedAccountThroughExternalId**](docs/Api/OnboardingLimitedReleaseApi.md#searchmanagedaccountthroughexternalid)                         | **GET** /v3/customer/managed-accounts                                    | Search managed account through external id                   |
+| *OnboardingLimitedReleaseApi* | [**showsCollectionOfRegisteredWalletDomains**](docs/Api/OnboardingLimitedReleaseApi.md#showscollectionofregisteredwalletdomains)                   | **GET** /v3/customer/managed-accounts/{id}/wallet-domains                | Shows collection of registered wallet domains                |
+| *OrdersApi*                   | [**authorizePaymentForOrder**](docs/Api/OrdersApi.md#authorizepaymentfororder)                                                                     | **POST** /v2/checkout/orders/{order_id}/authorize                        | Authorize payment for order                                  |
+| *OrdersApi*                   | [**capturePaymentForOrder**](docs/Api/OrdersApi.md#capturepaymentfororder)                                                                         | **POST** /v2/checkout/orders/{order_id}/capture                          | Capture payment for order                                    |
+| *OrdersApi*                   | [**createOrder**](docs/Api/OrdersApi.md#createorder)                                                                                               | **POST** /v2/checkout/orders                                             | Create order                                                 |
+| *OrdersApi*                   | [**showOrderDetails**](docs/Api/OrdersApi.md#showorderdetails)                                                                                     | **GET** /v2/checkout/orders/{order_id}                                   | Show order details                                           |
+| *OrdersApi*                   | [**updateOrder**](docs/Api/OrdersApi.md#updateorder)                                                                                               | **PATCH** /v2/checkout/orders/{order_id}                                 | Update order                                                 |
+| *PaymentsApi*                 | [**captureAuthorizedPayment**](docs/Api/PaymentsApi.md#captureauthorizedpayment)                                                                   | **POST** /v2/payments/authorizations/{authorization_id}/capture          | Capture authorized payment                                   |
+| *PaymentsApi*                 | [**reauthorizeAuthorizedPayment**](docs/Api/PaymentsApi.md#reauthorizeauthorizedpayment)                                                           | **POST** /v2/payments/authorizations/{authorization_id}/reauthorize      | Reauthorize authorized payment                               |
+| *PaymentsApi*                 | [**refundCapturedPayment**](docs/Api/PaymentsApi.md#refundcapturedpayment)                                                                         | **POST** /v2/payments/captures/{capture_id}/refund                       | Refund captured payment                                      |
+| *PaymentsApi*                 | [**showCapturedPaymentDetails**](docs/Api/PaymentsApi.md#showcapturedpaymentdetails)                                                               | **GET** /v2/payments/captures/{capture_id}                               | Show captured payment details                                |
+| *PaymentsApi*                 | [**showDetailsForAuthorizedPayment**](docs/Api/PaymentsApi.md#showdetailsforauthorizedpayment)                                                     | **GET** /v2/payments/authorizations/{authorization_id}                   | Show details for authorized payment                          |
+| *PaymentsApi*                 | [**showRefundDetails**](docs/Api/PaymentsApi.md#showrefunddetails)                                                                                 | **GET** /v2/payments/refunds/{refund_id}                                 | Show refund details                                          |
+| *PaymentsApi*                 | [**voidAuthorizedPayment**](docs/Api/PaymentsApi.md#voidauthorizedpayment)                                                                         | **POST** /v2/payments/authorizations/{authorization_id}/void             | Void authorized payment                                      |
+| *PayoutsApi*                  | [**cancelUnclaimedPayoutItem**](docs/Api/PayoutsApi.md#cancelunclaimedpayoutitem)                                                                  | **POST** /v1/payments/payouts-item/{payout_item_id}/cancel               | Cancel unclaimed payout item                                 |
+| *PayoutsApi*                  | [**createBatchPayout**](docs/Api/PayoutsApi.md#createbatchpayout)                                                                                  | **POST** /v1/payments/payouts                                            | Create batch payout                                          |
+| *PayoutsApi*                  | [**showPayoutBatchDetails**](docs/Api/PayoutsApi.md#showpayoutbatchdetails)                                                                        | **GET** /v1/payments/payouts/{payout_batch_id}                           | Show payout batch details                                    |
+| *PayoutsApi*                  | [**showPayoutItemDetails**](docs/Api/PayoutsApi.md#showpayoutitemdetails)                                                                          | **GET** /v1/payments/payouts-item/{payout_item_id}                       | Show payout item details                                     |
+| *PlansApi*                    | [**activatePlan**](docs/Api/PlansApi.md#activateplan)                                                                                              | **POST** /v1/billing/plans/{billing_plan_id}/activate                    | Activate plan                                                |
+| *PlansApi*                    | [**createPlan**](docs/Api/PlansApi.md#createplan)                                                                                                  | **POST** /v1/billing/plans                                               | Create plan                                                  |
+| *PlansApi*                    | [**deactivatePlan**](docs/Api/PlansApi.md#deactivateplan)                                                                                          | **POST** /v1/billing/plans/{billing_plan_id}/deactivate                  | Deactivate plan                                              |
+| *PlansApi*                    | [**listPlans**](docs/Api/PlansApi.md#listplans)                                                                                                    | **GET** /v1/billing/plans                                                | List plans                                                   |
+| *PlansApi*                    | [**showPlanDetails**](docs/Api/PlansApi.md#showplandetails)                                                                                        | **GET** /v1/billing/plans/{billing_plan_id}                              | Show plan details                                            |
+| *PlansApi*                    | [**updatePlan**](docs/Api/PlansApi.md#updateplan)                                                                                                  | **PATCH** /v1/billing/plans/{billing_plan_id}                            | Update plan                                                  |
+| *PlansApi*                    | [**updatePricing**](docs/Api/PlansApi.md#updatepricing)                                                                                            | **POST** /v1/billing/plans/{billing_plan_id}/update-pricing-schemes      | Update pricing                                               |
+| *ShipmentTrackingApi*         | [**addTrackingInformationForMultiplePaypalTransactions**](docs/Api/ShipmentTrackingApi.md#addtrackinginformationformultiplepaypaltransactions)     | **POST** /v1/shipping/trackers-batch                                     | Add tracking information for multiple PayPal transactions    |
+| *ShipmentTrackingApi*         | [**showTrackingInformation**](docs/Api/ShipmentTrackingApi.md#showtrackinginformation)                                                             | **GET** /v1/shipping/trackers/{tracking_id}                              | Show tracking information                                    |
+| *ShipmentTrackingApi*         | [**updateOrCancelTrackingInformationForPaypalTransaction**](docs/Api/ShipmentTrackingApi.md#updateorcanceltrackinginformationforpaypaltransaction) | **PUT** /v1/shipping/trackers/{tracking_id}                              | Update or cancel tracking information for PayPal transaction |
+| *SubscriptionsApi*            | [**activatePlan**](docs/Api/SubscriptionsApi.md#activateplan)                                                                                      | **POST** /v1/billing/plans/{billing_plan_id}/activate                    | Activate plan                                                |
+| *SubscriptionsApi*            | [**activateSubscription**](docs/Api/SubscriptionsApi.md#activatesubscription)                                                                      | **POST** /v1/billing/subscriptions/{subscription_id}/activate            | Activate subscription                                        |
+| *SubscriptionsApi*            | [**cancelSubscription**](docs/Api/SubscriptionsApi.md#cancelsubscription)                                                                          | **POST** /v1/billing/subscriptions/{subscription_id}/cancel              | Cancel subscription                                          |
+| *SubscriptionsApi*            | [**captureAuthorizedPaymentOnSubscription**](docs/Api/SubscriptionsApi.md#captureauthorizedpaymentonsubscription)                                  | **POST** /v1/billing/subscriptions/{subscription_id}/capture             | Capture authorized payment on subscription                   |
+| *SubscriptionsApi*            | [**createPlan**](docs/Api/SubscriptionsApi.md#createplan)                                                                                          | **POST** /v1/billing/plans                                               | Create plan                                                  |
+| *SubscriptionsApi*            | [**createSubscription**](docs/Api/SubscriptionsApi.md#createsubscription)                                                                          | **POST** /v1/billing/subscriptions                                       | Create subscription                                          |
+| *SubscriptionsApi*            | [**deactivatePlan**](docs/Api/SubscriptionsApi.md#deactivateplan)                                                                                  | **POST** /v1/billing/plans/{billing_plan_id}/deactivate                  | Deactivate plan                                              |
+| *SubscriptionsApi*            | [**listPlans**](docs/Api/SubscriptionsApi.md#listplans)                                                                                            | **GET** /v1/billing/plans                                                | List plans                                                   |
+| *SubscriptionsApi*            | [**listProducts**](docs/Api/SubscriptionsApi.md#listproducts)                                                                                      | **GET** /v1/catalogs/products                                            | List products                                                |
+| *SubscriptionsApi*            | [**listTransactionsForSubscription**](docs/Api/SubscriptionsApi.md#listtransactionsforsubscription)                                                | **GET** /v1/billing/subscriptions/{subscription_id}/transactions         | List transactions for subscription                           |
+| *SubscriptionsApi*            | [**revisePlanOrQuantityOfSubscription**](docs/Api/SubscriptionsApi.md#reviseplanorquantityofsubscription)                                          | **POST** /v1/billing/subscriptions/{subscription_id}/revise              | Revise plan or quantity of subscription                      |
+| *SubscriptionsApi*            | [**showPlanDetails**](docs/Api/SubscriptionsApi.md#showplandetails)                                                                                | **GET** /v1/billing/plans/{billing_plan_id}                              | Show plan details                                            |
+| *SubscriptionsApi*            | [**showProductDetails**](docs/Api/SubscriptionsApi.md#showproductdetails)                                                                          | **GET** /v1/catalogs/products/{product_id}                               | Show product details                                         |
+| *SubscriptionsApi*            | [**showSubscriptionDetails**](docs/Api/SubscriptionsApi.md#showsubscriptiondetails)                                                                | **GET** /v1/billing/subscriptions/{subscription_id}                      | Show subscription details                                    |
+| *SubscriptionsApi*            | [**suspendSubscription**](docs/Api/SubscriptionsApi.md#suspendsubscription)                                                                        | **POST** /v1/billing/subscriptions/{subscription_id}/suspend             | Suspend subscription                                         |
+| *SubscriptionsApi*            | [**updatePlan**](docs/Api/SubscriptionsApi.md#updateplan)                                                                                          | **PATCH** /v1/billing/plans/{billing_plan_id}                            | Update plan                                                  |
+| *SubscriptionsApi*            | [**updatePricing**](docs/Api/SubscriptionsApi.md#updatepricing)                                                                                    | **POST** /v1/billing/plans/{billing_plan_id}/update-pricing-schemes      | Update pricing                                               |
+| *SubscriptionsApi*            | [**updateProduct**](docs/Api/SubscriptionsApi.md#updateproduct)                                                                                    | **PATCH** /v1/catalogs/products/{product_id}                             | Update product                                               |
+| *SubscriptionsApi*            | [**updateSubscription**](docs/Api/SubscriptionsApi.md#updatesubscription)                                                                          | **PATCH** /v1/billing/subscriptions/{subscription_id}                    | Update subscription                                          |
+| *Subscriptions1Api*           | [**activateSubscription**](docs/Api/Subscriptions1Api.md#activatesubscription)                                                                     | **POST** /v1/billing/subscriptions/{subscription_id}/activate            | Activate subscription                                        |
+| *Subscriptions1Api*           | [**cancelSubscription**](docs/Api/Subscriptions1Api.md#cancelsubscription)                                                                         | **POST** /v1/billing/subscriptions/{subscription_id}/cancel              | Cancel subscription                                          |
+| *Subscriptions1Api*           | [**captureAuthorizedPaymentOnSubscription**](docs/Api/Subscriptions1Api.md#captureauthorizedpaymentonsubscription)                                 | **POST** /v1/billing/subscriptions/{subscription_id}/capture             | Capture authorized payment on subscription                   |
+| *Subscriptions1Api*           | [**createSubscription**](docs/Api/Subscriptions1Api.md#createsubscription)                                                                         | **POST** /v1/billing/subscriptions                                       | Create subscription                                          |
+| *Subscriptions1Api*           | [**listTransactionsForSubscription**](docs/Api/Subscriptions1Api.md#listtransactionsforsubscription)                                               | **GET** /v1/billing/subscriptions/{subscription_id}/transactions         | List transactions for subscription                           |
+| *Subscriptions1Api*           | [**revisePlanOrQuantityOfSubscription**](docs/Api/Subscriptions1Api.md#reviseplanorquantityofsubscription)                                         | **POST** /v1/billing/subscriptions/{subscription_id}/revise              | Revise plan or quantity of subscription                      |
+| *Subscriptions1Api*           | [**showSubscriptionDetails**](docs/Api/Subscriptions1Api.md#showsubscriptiondetails)                                                               | **GET** /v1/billing/subscriptions/{subscription_id}                      | Show subscription details                                    |
+| *Subscriptions1Api*           | [**suspendSubscription**](docs/Api/Subscriptions1Api.md#suspendsubscription)                                                                       | **POST** /v1/billing/subscriptions/{subscription_id}/suspend             | Suspend subscription                                         |
+| *Subscriptions1Api*           | [**updateSubscription**](docs/Api/Subscriptions1Api.md#updatesubscription)                                                                         | **PATCH** /v1/billing/subscriptions/{subscription_id}                    | Update subscription                                          |
+| *TemplatesApi*                | [**createTemplate**](docs/Api/TemplatesApi.md#createtemplate)                                                                                      | **POST** /v2/invoicing/templates                                         | Create template                                              |
+| *TemplatesApi*                | [**deleteTemplate**](docs/Api/TemplatesApi.md#deletetemplate)                                                                                      | **DELETE** /v2/invoicing/templates/{template_id}                         | Delete template                                              |
+| *TemplatesApi*                | [**fullyUpdateTemplate**](docs/Api/TemplatesApi.md#fullyupdatetemplate)                                                                            | **PUT** /v2/invoicing/templates/{template_id}                            | Fully update template                                        |
+| *TemplatesApi*                | [**listTemplates**](docs/Api/TemplatesApi.md#listtemplates)                                                                                        | **GET** /v2/invoicing/templates                                          | List templates                                               |
+| *TemplatesApi*                | [**showTemplateDetails**](docs/Api/TemplatesApi.md#showtemplatedetails)                                                                            | **GET** /v2/invoicing/templates/{template_id}                            | Show template details                                        |
+| *TransactionSearchApi*        | [**listAllBalances**](docs/Api/TransactionSearchApi.md#listallbalances)                                                                            | **GET** /v1/reporting/balances                                           | List all balances                                            |
+| *TransactionSearchApi*        | [**listTransactions**](docs/Api/TransactionSearchApi.md#listtransactions)                                                                          | **GET** /v1/reporting/transactions                                       | List transactions                                            |
+| *WebhooksApi*                 | [**createWebhook**](docs/Api/WebhooksApi.md#createwebhook)                                                                                         | **POST** /v1/notifications/webhooks                                      | Create webhook                                               |
+| *WebhooksApi*                 | [**deleteWebhook**](docs/Api/WebhooksApi.md#deletewebhook)                                                                                         | **DELETE** /v1/notifications/webhooks/{webhook_id}                       | Delete webhook                                               |
+| *WebhooksApi*                 | [**listAvailableEvents**](docs/Api/WebhooksApi.md#listavailableevents)                                                                             | **GET** /v1/notifications/webhooks-event-types                           | List available events                                        |
+| *WebhooksApi*                 | [**listEventNotifications**](docs/Api/WebhooksApi.md#listeventnotifications)                                                                       | **GET** /v1/notifications/webhooks-events                                | List event notifications                                     |
+| *WebhooksApi*                 | [**listEventSubscriptionsForWebhook**](docs/Api/WebhooksApi.md#listeventsubscriptionsforwebhook)                                                   | **GET** /v1/notifications/webhooks/{webhook_id}/event-types              | List event subscriptions for webhook                         |
+| *WebhooksApi*                 | [**listWebhooks**](docs/Api/WebhooksApi.md#listwebhooks)                                                                                           | **GET** /v1/notifications/webhooks                                       | List webhooks                                                |
+| *WebhooksApi*                 | [**resendEventNotification**](docs/Api/WebhooksApi.md#resendeventnotification)                                                                     | **POST** /v1/notifications/webhooks-events/{event_id}/resend             | Resend event notification                                    |
+| *WebhooksApi*                 | [**showEventNotificationDetails**](docs/Api/WebhooksApi.md#showeventnotificationdetails)                                                           | **GET** /v1/notifications/webhooks-events/{event_id}                     | Show event notification details                              |
+| *WebhooksApi*                 | [**showWebhookDetails**](docs/Api/WebhooksApi.md#showwebhookdetails)                                                                               | **GET** /v1/notifications/webhooks/{webhook_id}                          | Show webhook details                                         |
+| *WebhooksApi*                 | [**simulateWebhookEvent**](docs/Api/WebhooksApi.md#simulatewebhookevent)                                                                           | **POST** /v1/notifications/simulate-event                                | Simulate webhook event                                       |
+| *WebhooksApi*                 | [**triggerASampleEvent**](docs/Api/WebhooksApi.md#triggerasampleevent)                                                                             | **POST** /v1/catalogs/products                                           | Trigger a sample event                                       |
+| *WebhooksApi*                 | [**updateWebhook**](docs/Api/WebhooksApi.md#updatewebhook)                                                                                         | **PATCH** /v1/notifications/webhooks/{webhook_id}                        | Update webhook                                               |
+| *WebhooksApi*                 | [**verifyWebhookSignature**](docs/Api/WebhooksApi.md#verifywebhooksignature)                                                                       | **POST** /v1/notifications/verify-webhook-signature                      | Verify webhook signature                                     |
 
 ## Documentation For Models
 
+- [Body](docs/Model/Body.md)
+- [Body1](docs/Model/Body1.md)
+- [Body10](docs/Model/Body10.md)
+- [Body11](docs/Model/Body11.md)
+- [Body12](docs/Model/Body12.md)
+- [Body13](docs/Model/Body13.md)
+- [Body14](docs/Model/Body14.md)
+- [Body15](docs/Model/Body15.md)
+- [Body16](docs/Model/Body16.md)
+- [Body17](docs/Model/Body17.md)
+- [Body18](docs/Model/Body18.md)
+- [Body19](docs/Model/Body19.md)
+- [Body2](docs/Model/Body2.md)
+- [Body20](docs/Model/Body20.md)
+- [Body21](docs/Model/Body21.md)
+- [Body22](docs/Model/Body22.md)
+- [Body23](docs/Model/Body23.md)
+- [Body24](docs/Model/Body24.md)
+- [Body25](docs/Model/Body25.md)
+- [Body26](docs/Model/Body26.md)
+- [Body27](docs/Model/Body27.md)
+- [Body28](docs/Model/Body28.md)
+- [Body29](docs/Model/Body29.md)
+- [Body3](docs/Model/Body3.md)
+- [Body30](docs/Model/Body30.md)
+- [Body31](docs/Model/Body31.md)
+- [Body32](docs/Model/Body32.md)
+- [Body33](docs/Model/Body33.md)
+- [Body34](docs/Model/Body34.md)
+- [Body35](docs/Model/Body35.md)
+- [Body36](docs/Model/Body36.md)
+- [Body37](docs/Model/Body37.md)
+- [Body38](docs/Model/Body38.md)
+- [Body39](docs/Model/Body39.md)
+- [Body4](docs/Model/Body4.md)
+- [Body40](docs/Model/Body40.md)
+- [Body41](docs/Model/Body41.md)
+- [Body42](docs/Model/Body42.md)
+- [Body43](docs/Model/Body43.md)
+- [Body44](docs/Model/Body44.md)
+- [Body45](docs/Model/Body45.md)
+- [Body46](docs/Model/Body46.md)
+- [Body47](docs/Model/Body47.md)
+- [Body5](docs/Model/Body5.md)
+- [Body6](docs/Model/Body6.md)
+- [Body7](docs/Model/Body7.md)
+- [Body8](docs/Model/Body8.md)
+- [Body9](docs/Model/Body9.md)
+- [InlineResponse200](docs/Model/InlineResponse200.md)
+- [InlineResponse2001](docs/Model/InlineResponse2001.md)
+- [InlineResponse20010](docs/Model/InlineResponse20010.md)
+- [InlineResponse20010Links](docs/Model/InlineResponse20010Links.md)
+- [InlineResponse20011](docs/Model/InlineResponse20011.md)
+- [InlineResponse20011Links](docs/Model/InlineResponse20011Links.md)
+- [InlineResponse20012](docs/Model/InlineResponse20012.md)
+- [InlineResponse20013](docs/Model/InlineResponse20013.md)
+- [InlineResponse20014](docs/Model/InlineResponse20014.md)
+- [InlineResponse20015](docs/Model/InlineResponse20015.md)
+- [InlineResponse20015EventTypes](docs/Model/InlineResponse20015EventTypes.md)
+- [InlineResponse20015Links](docs/Model/InlineResponse20015Links.md)
+- [InlineResponse20015Webhooks](docs/Model/InlineResponse20015Webhooks.md)
+- [InlineResponse20016](docs/Model/InlineResponse20016.md)
+- [InlineResponse20016EventTypes](docs/Model/InlineResponse20016EventTypes.md)
+- [InlineResponse20017](docs/Model/InlineResponse20017.md)
+- [InlineResponse20017Events](docs/Model/InlineResponse20017Events.md)
+- [InlineResponse20017Links](docs/Model/InlineResponse20017Links.md)
+- [InlineResponse20017Resource](docs/Model/InlineResponse20017Resource.md)
+- [InlineResponse20017ResourceAmount](docs/Model/InlineResponse20017ResourceAmount.md)
+- [InlineResponse20017ResourceLinks](docs/Model/InlineResponse20017ResourceLinks.md)
+- [InlineResponse20017ResourceSellerProtection](docs/Model/InlineResponse20017ResourceSellerProtection.md)
+- [InlineResponse20017ResourceSellerReceivableBreakdown](docs/Model/InlineResponse20017ResourceSellerReceivableBreakdown.md)
+- [InlineResponse20017ResourceSellerReceivableBreakdownNetAmount](docs/Model/InlineResponse20017ResourceSellerReceivableBreakdownNetAmount.md)
+- [InlineResponse20017ResourceSellerReceivableBreakdownPaypalFee](docs/Model/InlineResponse20017ResourceSellerReceivableBreakdownPaypalFee.md)
+- [InlineResponse20017ResourceSupplementaryData](docs/Model/InlineResponse20017ResourceSupplementaryData.md)
+- [InlineResponse20017ResourceSupplementaryDataRelatedIds](docs/Model/InlineResponse20017ResourceSupplementaryDataRelatedIds.md)
+- [InlineResponse20018](docs/Model/InlineResponse20018.md)
+- [InlineResponse20018Links](docs/Model/InlineResponse20018Links.md)
+- [InlineResponse20018Resource](docs/Model/InlineResponse20018Resource.md)
+- [InlineResponse20018ResourceLinks](docs/Model/InlineResponse20018ResourceLinks.md)
+- [InlineResponse20018ResourceProcessorResponse](docs/Model/InlineResponse20018ResourceProcessorResponse.md)
+- [InlineResponse20018ResourceSellerProtection](docs/Model/InlineResponse20018ResourceSellerProtection.md)
+- [InlineResponse20018ResourceSellerReceivableBreakdown](docs/Model/InlineResponse20018ResourceSellerReceivableBreakdown.md)
+- [InlineResponse20018ResourceSellerReceivableBreakdownNetAmount](docs/Model/InlineResponse20018ResourceSellerReceivableBreakdownNetAmount.md)
+- [InlineResponse20018ResourceSellerReceivableBreakdownPaypalFee](docs/Model/InlineResponse20018ResourceSellerReceivableBreakdownPaypalFee.md)
+- [InlineResponse20018ResourceSupplementaryData](docs/Model/InlineResponse20018ResourceSupplementaryData.md)
+- [InlineResponse20018ResourceSupplementaryDataRelatedIds](docs/Model/InlineResponse20018ResourceSupplementaryDataRelatedIds.md)
+- [InlineResponse20019](docs/Model/InlineResponse20019.md)
+- [InlineResponse20019EventTypes](docs/Model/InlineResponse20019EventTypes.md)
+- [InlineResponse20019Links](docs/Model/InlineResponse20019Links.md)
+- [InlineResponse2001BillingCycles](docs/Model/InlineResponse2001BillingCycles.md)
+- [InlineResponse2001Links](docs/Model/InlineResponse2001Links.md)
+- [InlineResponse2001PricingScheme](docs/Model/InlineResponse2001PricingScheme.md)
+- [InlineResponse2002](docs/Model/InlineResponse2002.md)
+- [InlineResponse20020](docs/Model/InlineResponse20020.md)
+- [InlineResponse20020EventTypes](docs/Model/InlineResponse20020EventTypes.md)
+- [InlineResponse20020Links](docs/Model/InlineResponse20020Links.md)
+- [InlineResponse20021](docs/Model/InlineResponse20021.md)
+- [InlineResponse20022](docs/Model/InlineResponse20022.md)
+- [InlineResponse20022ClientMetadata](docs/Model/InlineResponse20022ClientMetadata.md)
+- [InlineResponse20023](docs/Model/InlineResponse20023.md)
+- [InlineResponse20023Errors](docs/Model/InlineResponse20023Errors.md)
+- [InlineResponse20023Links](docs/Model/InlineResponse20023Links.md)
+- [InlineResponse20023PayoutItem](docs/Model/InlineResponse20023PayoutItem.md)
+- [InlineResponse20023PayoutItemFee](docs/Model/InlineResponse20023PayoutItemFee.md)
+- [InlineResponse20024](docs/Model/InlineResponse20024.md)
+- [InlineResponse20024Links](docs/Model/InlineResponse20024Links.md)
+- [InlineResponse20024PayoutItem](docs/Model/InlineResponse20024PayoutItem.md)
+- [InlineResponse20024PayoutItemAmount](docs/Model/InlineResponse20024PayoutItemAmount.md)
+- [InlineResponse20025](docs/Model/InlineResponse20025.md)
+- [InlineResponse20025BatchHeader](docs/Model/InlineResponse20025BatchHeader.md)
+- [InlineResponse20025BatchHeaderAmount](docs/Model/InlineResponse20025BatchHeaderAmount.md)
+- [InlineResponse20025BatchHeaderFees](docs/Model/InlineResponse20025BatchHeaderFees.md)
+- [InlineResponse20025Items](docs/Model/InlineResponse20025Items.md)
+- [InlineResponse20025Links](docs/Model/InlineResponse20025Links.md)
+- [InlineResponse20025Links1](docs/Model/InlineResponse20025Links1.md)
+- [InlineResponse20025PayoutItem](docs/Model/InlineResponse20025PayoutItem.md)
+- [InlineResponse20026](docs/Model/InlineResponse20026.md)
+- [InlineResponse20026AvailableBalance](docs/Model/InlineResponse20026AvailableBalance.md)
+- [InlineResponse20026Balances](docs/Model/InlineResponse20026Balances.md)
+- [InlineResponse20026WithheldBalance](docs/Model/InlineResponse20026WithheldBalance.md)
+- [InlineResponse20027](docs/Model/InlineResponse20027.md)
+- [InlineResponse20027Links](docs/Model/InlineResponse20027Links.md)
+- [InlineResponse20028](docs/Model/InlineResponse20028.md)
+- [InlineResponse20028Details](docs/Model/InlineResponse20028Details.md)
+- [InlineResponse20028Errors](docs/Model/InlineResponse20028Errors.md)
+- [InlineResponse20028Links](docs/Model/InlineResponse20028Links.md)
+- [InlineResponse20029](docs/Model/InlineResponse20029.md)
+- [InlineResponse20029Links](docs/Model/InlineResponse20029Links.md)
+- [InlineResponse2002Links](docs/Model/InlineResponse2002Links.md)
+- [InlineResponse2002Plan](docs/Model/InlineResponse2002Plan.md)
+- [InlineResponse2002PlanBillingCycles](docs/Model/InlineResponse2002PlanBillingCycles.md)
+- [InlineResponse2002PlanPaymentPreferences](docs/Model/InlineResponse2002PlanPaymentPreferences.md)
+- [InlineResponse2002PlanPricingScheme](docs/Model/InlineResponse2002PlanPricingScheme.md)
+- [InlineResponse2003](docs/Model/InlineResponse2003.md)
+- [InlineResponse20030](docs/Model/InlineResponse20030.md)
+- [InlineResponse20030Amount](docs/Model/InlineResponse20030Amount.md)
+- [InlineResponse20030Links](docs/Model/InlineResponse20030Links.md)
+- [InlineResponse20030Payee](docs/Model/InlineResponse20030Payee.md)
+- [InlineResponse20030Payer](docs/Model/InlineResponse20030Payer.md)
+- [InlineResponse20030PayerAddress](docs/Model/InlineResponse20030PayerAddress.md)
+- [InlineResponse20030PurchaseUnits](docs/Model/InlineResponse20030PurchaseUnits.md)
+- [InlineResponse20030Shipping](docs/Model/InlineResponse20030Shipping.md)
+- [InlineResponse20030ShippingAddress](docs/Model/InlineResponse20030ShippingAddress.md)
+- [InlineResponse20030ShippingName](docs/Model/InlineResponse20030ShippingName.md)
+- [InlineResponse20031](docs/Model/InlineResponse20031.md)
+- [InlineResponse20032](docs/Model/InlineResponse20032.md)
+- [InlineResponse20032Amount](docs/Model/InlineResponse20032Amount.md)
+- [InlineResponse20032BillingInfo](docs/Model/InlineResponse20032BillingInfo.md)
+- [InlineResponse20032BillingInfoName](docs/Model/InlineResponse20032BillingInfoName.md)
+- [InlineResponse20032Detail](docs/Model/InlineResponse20032Detail.md)
+- [InlineResponse20032DetailMetadata](docs/Model/InlineResponse20032DetailMetadata.md)
+- [InlineResponse20032DetailPaymentTerm](docs/Model/InlineResponse20032DetailPaymentTerm.md)
+- [InlineResponse20032Items](docs/Model/InlineResponse20032Items.md)
+- [InlineResponse20032Links](docs/Model/InlineResponse20032Links.md)
+- [InlineResponse20032Links1](docs/Model/InlineResponse20032Links1.md)
+- [InlineResponse20032PrimaryRecipients](docs/Model/InlineResponse20032PrimaryRecipients.md)
+- [InlineResponse20032ShippingInfo](docs/Model/InlineResponse20032ShippingInfo.md)
+- [InlineResponse20033](docs/Model/InlineResponse20033.md)
+- [InlineResponse20033Amount](docs/Model/InlineResponse20033Amount.md)
+- [InlineResponse20033AmountBreakdown](docs/Model/InlineResponse20033AmountBreakdown.md)
+- [InlineResponse20033AmountBreakdownDiscount](docs/Model/InlineResponse20033AmountBreakdownDiscount.md)
+- [InlineResponse20033AmountBreakdownDiscountInvoiceDiscount](docs/Model/InlineResponse20033AmountBreakdownDiscountInvoiceDiscount.md)
+- [InlineResponse20033AmountBreakdownDiscountInvoiceDiscountAmount](docs/Model/InlineResponse20033AmountBreakdownDiscountInvoiceDiscountAmount.md)
+- [InlineResponse20033AmountBreakdownDiscountItemDiscount](docs/Model/InlineResponse20033AmountBreakdownDiscountItemDiscount.md)
+- [InlineResponse20033AmountBreakdownItemTotal](docs/Model/InlineResponse20033AmountBreakdownItemTotal.md)
+- [InlineResponse20033AmountBreakdownShipping](docs/Model/InlineResponse20033AmountBreakdownShipping.md)
+- [InlineResponse20033AmountBreakdownShippingTax](docs/Model/InlineResponse20033AmountBreakdownShippingTax.md)
+- [InlineResponse20033AmountBreakdownShippingTaxAmount](docs/Model/InlineResponse20033AmountBreakdownShippingTaxAmount.md)
+- [InlineResponse20033AmountBreakdownTaxTotal](docs/Model/InlineResponse20033AmountBreakdownTaxTotal.md)
+- [InlineResponse20033BillingInfo](docs/Model/InlineResponse20033BillingInfo.md)
+- [InlineResponse20033Configuration](docs/Model/InlineResponse20033Configuration.md)
+- [InlineResponse20033Detail](docs/Model/InlineResponse20033Detail.md)
+- [InlineResponse20033DetailMetadata](docs/Model/InlineResponse20033DetailMetadata.md)
+- [InlineResponse20033DetailPaymentTerm](docs/Model/InlineResponse20033DetailPaymentTerm.md)
+- [InlineResponse20033Discount](docs/Model/InlineResponse20033Discount.md)
+- [InlineResponse20033DiscountAmount](docs/Model/InlineResponse20033DiscountAmount.md)
+- [InlineResponse20033Invoicer](docs/Model/InlineResponse20033Invoicer.md)
+- [InlineResponse20033InvoicerAddress](docs/Model/InlineResponse20033InvoicerAddress.md)
+- [InlineResponse20033InvoicerName](docs/Model/InlineResponse20033InvoicerName.md)
+- [InlineResponse20033Items](docs/Model/InlineResponse20033Items.md)
+- [InlineResponse20033Links](docs/Model/InlineResponse20033Links.md)
+- [InlineResponse20033PrimaryRecipients](docs/Model/InlineResponse20033PrimaryRecipients.md)
+- [InlineResponse20033ShippingInfo](docs/Model/InlineResponse20033ShippingInfo.md)
+- [InlineResponse20033Tax](docs/Model/InlineResponse20033Tax.md)
+- [InlineResponse20033TaxAmount](docs/Model/InlineResponse20033TaxAmount.md)
+- [InlineResponse20034](docs/Model/InlineResponse20034.md)
+- [InlineResponse20035](docs/Model/InlineResponse20035.md)
+- [InlineResponse20036](docs/Model/InlineResponse20036.md)
+- [InlineResponse20037](docs/Model/InlineResponse20037.md)
+- [InlineResponse20037Amount](docs/Model/InlineResponse20037Amount.md)
+- [InlineResponse20037BillingInfo](docs/Model/InlineResponse20037BillingInfo.md)
+- [InlineResponse20037Detail](docs/Model/InlineResponse20037Detail.md)
+- [InlineResponse20037DetailMetadata](docs/Model/InlineResponse20037DetailMetadata.md)
+- [InlineResponse20037DetailPaymentTerm](docs/Model/InlineResponse20037DetailPaymentTerm.md)
+- [InlineResponse20037Invoicer](docs/Model/InlineResponse20037Invoicer.md)
+- [InlineResponse20037Items](docs/Model/InlineResponse20037Items.md)
+- [InlineResponse20037Links](docs/Model/InlineResponse20037Links.md)
+- [InlineResponse20037Links1](docs/Model/InlineResponse20037Links1.md)
+- [InlineResponse20037Payments](docs/Model/InlineResponse20037Payments.md)
+- [InlineResponse20037PaymentsPaidAmount](docs/Model/InlineResponse20037PaymentsPaidAmount.md)
+- [InlineResponse20037PrimaryRecipients](docs/Model/InlineResponse20037PrimaryRecipients.md)
+- [InlineResponse20037Refunds](docs/Model/InlineResponse20037Refunds.md)
+- [InlineResponse20038](docs/Model/InlineResponse20038.md)
+- [InlineResponse20038Addresses](docs/Model/InlineResponse20038Addresses.md)
+- [InlineResponse20038Links](docs/Model/InlineResponse20038Links.md)
+- [InlineResponse20038Links1](docs/Model/InlineResponse20038Links1.md)
+- [InlineResponse20038Settings](docs/Model/InlineResponse20038Settings.md)
+- [InlineResponse20038SettingsDisplayPreference](docs/Model/InlineResponse20038SettingsDisplayPreference.md)
+- [InlineResponse20038SettingsTemplateItemSettings](docs/Model/InlineResponse20038SettingsTemplateItemSettings.md)
+- [InlineResponse20038SettingsTemplateSubtotalSettings](docs/Model/InlineResponse20038SettingsTemplateSubtotalSettings.md)
+- [InlineResponse20038TemplateInfo](docs/Model/InlineResponse20038TemplateInfo.md)
+- [InlineResponse20038TemplateInfoDetail](docs/Model/InlineResponse20038TemplateInfoDetail.md)
+- [InlineResponse20038TemplateInfoDetailMetadata](docs/Model/InlineResponse20038TemplateInfoDetailMetadata.md)
+- [InlineResponse20038TemplateInfoInvoicer](docs/Model/InlineResponse20038TemplateInfoInvoicer.md)
+- [InlineResponse20038Templates](docs/Model/InlineResponse20038Templates.md)
+- [InlineResponse20039](docs/Model/InlineResponse20039.md)
+- [InlineResponse20039Links](docs/Model/InlineResponse20039Links.md)
+- [InlineResponse20039TemplateInfo](docs/Model/InlineResponse20039TemplateInfo.md)
+- [InlineResponse20039TemplateInfoAmount](docs/Model/InlineResponse20039TemplateInfoAmount.md)
+- [InlineResponse20039TemplateInfoAmountBreakdown](docs/Model/InlineResponse20039TemplateInfoAmountBreakdown.md)
+- [InlineResponse20039TemplateInfoAmountBreakdownShipping](docs/Model/InlineResponse20039TemplateInfoAmountBreakdownShipping.md)
+- [InlineResponse20039TemplateInfoAmountBreakdownShippingTax](docs/Model/InlineResponse20039TemplateInfoAmountBreakdownShippingTax.md)
+- [InlineResponse20039TemplateInfoDetail](docs/Model/InlineResponse20039TemplateInfoDetail.md)
+- [InlineResponse20039TemplateInfoDetailMetadata](docs/Model/InlineResponse20039TemplateInfoDetailMetadata.md)
+- [InlineResponse20039TemplateInfoItems](docs/Model/InlineResponse20039TemplateInfoItems.md)
+- [InlineResponse2003Links](docs/Model/InlineResponse2003Links.md)
+- [InlineResponse2004](docs/Model/InlineResponse2004.md)
+- [InlineResponse20040](docs/Model/InlineResponse20040.md)
+- [InlineResponse20040Links](docs/Model/InlineResponse20040Links.md)
+- [InlineResponse20040TemplateInfo](docs/Model/InlineResponse20040TemplateInfo.md)
+- [InlineResponse20040TemplateInfoAmount](docs/Model/InlineResponse20040TemplateInfoAmount.md)
+- [InlineResponse20040TemplateInfoAmountBreakdown](docs/Model/InlineResponse20040TemplateInfoAmountBreakdown.md)
+- [InlineResponse20040TemplateInfoAmountBreakdownShipping](docs/Model/InlineResponse20040TemplateInfoAmountBreakdownShipping.md)
+- [InlineResponse20040TemplateInfoDetail](docs/Model/InlineResponse20040TemplateInfoDetail.md)
+- [InlineResponse20040TemplateInfoDetailMetadata](docs/Model/InlineResponse20040TemplateInfoDetailMetadata.md)
+- [InlineResponse20040TemplateInfoItems](docs/Model/InlineResponse20040TemplateInfoItems.md)
+- [InlineResponse20041](docs/Model/InlineResponse20041.md)
+- [InlineResponse20041Links](docs/Model/InlineResponse20041Links.md)
+- [InlineResponse20041SupplementaryData](docs/Model/InlineResponse20041SupplementaryData.md)
+- [InlineResponse20041SupplementaryDataRelatedIds](docs/Model/InlineResponse20041SupplementaryDataRelatedIds.md)
+- [InlineResponse20042](docs/Model/InlineResponse20042.md)
+- [InlineResponse20042Links](docs/Model/InlineResponse20042Links.md)
+- [InlineResponse20043](docs/Model/InlineResponse20043.md)
+- [InlineResponse20043Links](docs/Model/InlineResponse20043Links.md)
+- [InlineResponse20043SellerReceivableBreakdown](docs/Model/InlineResponse20043SellerReceivableBreakdown.md)
+- [InlineResponse20043SellerReceivableBreakdownNetAmount](docs/Model/InlineResponse20043SellerReceivableBreakdownNetAmount.md)
+- [InlineResponse20043SupplementaryData](docs/Model/InlineResponse20043SupplementaryData.md)
+- [InlineResponse20043SupplementaryDataRelatedIds](docs/Model/InlineResponse20043SupplementaryDataRelatedIds.md)
+- [InlineResponse20044](docs/Model/InlineResponse20044.md)
+- [InlineResponse20044Links](docs/Model/InlineResponse20044Links.md)
+- [InlineResponse20044SellerPayableBreakdown](docs/Model/InlineResponse20044SellerPayableBreakdown.md)
+- [InlineResponse20044SellerPayableBreakdownNetAmount](docs/Model/InlineResponse20044SellerPayableBreakdownNetAmount.md)
+- [InlineResponse20044SellerPayableBreakdownPaypalFee](docs/Model/InlineResponse20044SellerPayableBreakdownPaypalFee.md)
+- [InlineResponse20045](docs/Model/InlineResponse20045.md)
+- [InlineResponse20046](docs/Model/InlineResponse20046.md)
+- [InlineResponse20046Agreements](docs/Model/InlineResponse20046Agreements.md)
+- [InlineResponse20046BirthDetails](docs/Model/InlineResponse20046BirthDetails.md)
+- [InlineResponse20046BusinessEntity](docs/Model/InlineResponse20046BusinessEntity.md)
+- [InlineResponse20046BusinessEntityDeclarations](docs/Model/InlineResponse20046BusinessEntityDeclarations.md)
+- [InlineResponse20046BusinessEntityNames](docs/Model/InlineResponse20046BusinessEntityNames.md)
+- [InlineResponse20046BusinessEntityPhoneNumbers](docs/Model/InlineResponse20046BusinessEntityPhoneNumbers.md)
+- [InlineResponse20046Capabilities](docs/Model/InlineResponse20046Capabilities.md)
+- [InlineResponse20046FinancialInstruments](docs/Model/InlineResponse20046FinancialInstruments.md)
+- [InlineResponse20046FinancialInstrumentsAccountHolderDetails](docs/Model/InlineResponse20046FinancialInstrumentsAccountHolderDetails.md)
+- [InlineResponse20046FinancialInstrumentsBanks](docs/Model/InlineResponse20046FinancialInstrumentsBanks.md)
+- [InlineResponse20046IdentificationDocuments](docs/Model/InlineResponse20046IdentificationDocuments.md)
+- [InlineResponse20046IndividualOwners](docs/Model/InlineResponse20046IndividualOwners.md)
+- [InlineResponse20046Links](docs/Model/InlineResponse20046Links.md)
+- [InlineResponse20046Names](docs/Model/InlineResponse20046Names.md)
+- [InlineResponse20046PrimaryResidence](docs/Model/InlineResponse20046PrimaryResidence.md)
+- [InlineResponse20047](docs/Model/InlineResponse20047.md)
+- [InlineResponse20047BusinessEntity](docs/Model/InlineResponse20047BusinessEntity.md)
+- [InlineResponse20047BusinessEntityAddresses](docs/Model/InlineResponse20047BusinessEntityAddresses.md)
+- [InlineResponse20047BusinessEntityBeneficialOwners](docs/Model/InlineResponse20047BusinessEntityBeneficialOwners.md)
+- [InlineResponse20047BusinessEntityBeneficialOwnersAddresses](docs/Model/InlineResponse20047BusinessEntityBeneficialOwnersAddresses.md)
+- [InlineResponse20047BusinessEntityBeneficialOwnersIdentificationDocuments](docs/Model/InlineResponse20047BusinessEntityBeneficialOwnersIdentificationDocuments.md)
+- [InlineResponse20047BusinessEntityBeneficialOwnersIndividuals](docs/Model/InlineResponse20047BusinessEntityBeneficialOwnersIndividuals.md)
+- [InlineResponse20047BusinessEntityBeneficialOwnersNames](docs/Model/InlineResponse20047BusinessEntityBeneficialOwnersNames.md)
+- [InlineResponse20047BusinessEntityIdentificationDocuments](docs/Model/InlineResponse20047BusinessEntityIdentificationDocuments.md)
+- [InlineResponse20047BusinessEntityNames](docs/Model/InlineResponse20047BusinessEntityNames.md)
+- [InlineResponse20047BusinessEntityNames1](docs/Model/InlineResponse20047BusinessEntityNames1.md)
+- [InlineResponse20047BusinessEntityOfficeBearers](docs/Model/InlineResponse20047BusinessEntityOfficeBearers.md)
+- [InlineResponse20047BusinessEntityPhoneNumbers](docs/Model/InlineResponse20047BusinessEntityPhoneNumbers.md)
+- [InlineResponse20047BusinessEntityRegisteredBusinessAddress](docs/Model/InlineResponse20047BusinessEntityRegisteredBusinessAddress.md)
+- [InlineResponse20047IdentificationDocuments](docs/Model/InlineResponse20047IdentificationDocuments.md)
+- [InlineResponse20047IndividualOwners](docs/Model/InlineResponse20047IndividualOwners.md)
+- [InlineResponse20047Links](docs/Model/InlineResponse20047Links.md)
+- [InlineResponse20047Names](docs/Model/InlineResponse20047Names.md)
+- [InlineResponse20048](docs/Model/InlineResponse20048.md)
+- [InlineResponse20048Links](docs/Model/InlineResponse20048Links.md)
+- [InlineResponse20048WalletDomains](docs/Model/InlineResponse20048WalletDomains.md)
+- [InlineResponse2004AmountWithBreakdown](docs/Model/InlineResponse2004AmountWithBreakdown.md)
+- [InlineResponse2004AmountWithBreakdownFeeAmount](docs/Model/InlineResponse2004AmountWithBreakdownFeeAmount.md)
+- [InlineResponse2004AmountWithBreakdownGrossAmount](docs/Model/InlineResponse2004AmountWithBreakdownGrossAmount.md)
+- [InlineResponse2004AmountWithBreakdownNetAmount](docs/Model/InlineResponse2004AmountWithBreakdownNetAmount.md)
+- [InlineResponse2004Links](docs/Model/InlineResponse2004Links.md)
+- [InlineResponse2004PayerName](docs/Model/InlineResponse2004PayerName.md)
+- [InlineResponse2004Transactions](docs/Model/InlineResponse2004Transactions.md)
+- [InlineResponse2005](docs/Model/InlineResponse2005.md)
+- [InlineResponse2005Links](docs/Model/InlineResponse2005Links.md)
+- [InlineResponse2005Links1](docs/Model/InlineResponse2005Links1.md)
+- [InlineResponse2005Products](docs/Model/InlineResponse2005Products.md)
+- [InlineResponse2006](docs/Model/InlineResponse2006.md)
+- [InlineResponse2006Links](docs/Model/InlineResponse2006Links.md)
+- [InlineResponse2007](docs/Model/InlineResponse2007.md)
+- [InlineResponse2007DisputeAmount](docs/Model/InlineResponse2007DisputeAmount.md)
+- [InlineResponse2007Items](docs/Model/InlineResponse2007Items.md)
+- [InlineResponse2007Links](docs/Model/InlineResponse2007Links.md)
+- [InlineResponse2007Links1](docs/Model/InlineResponse2007Links1.md)
+- [InlineResponse2008](docs/Model/InlineResponse2008.md)
+- [InlineResponse2008ActionInfo](docs/Model/InlineResponse2008ActionInfo.md)
+- [InlineResponse2008Buyer](docs/Model/InlineResponse2008Buyer.md)
+- [InlineResponse2008DisputeAmount](docs/Model/InlineResponse2008DisputeAmount.md)
+- [InlineResponse2008DisputeOutcome](docs/Model/InlineResponse2008DisputeOutcome.md)
+- [InlineResponse2008DisputedTransactions](docs/Model/InlineResponse2008DisputedTransactions.md)
+- [InlineResponse2008Evidences](docs/Model/InlineResponse2008Evidences.md)
+- [InlineResponse2008Extensions](docs/Model/InlineResponse2008Extensions.md)
+- [InlineResponse2008FeePolicy](docs/Model/InlineResponse2008FeePolicy.md)
+- [InlineResponse2008History](docs/Model/InlineResponse2008History.md)
+- [InlineResponse2008Items](docs/Model/InlineResponse2008Items.md)
+- [InlineResponse2008Links](docs/Model/InlineResponse2008Links.md)
+- [InlineResponse2008Messages](docs/Model/InlineResponse2008Messages.md)
+- [InlineResponse2008MoneyMovements](docs/Model/InlineResponse2008MoneyMovements.md)
+- [InlineResponse2008Offer](docs/Model/InlineResponse2008Offer.md)
+- [InlineResponse2008OfferHistory](docs/Model/InlineResponse2008OfferHistory.md)
+- [InlineResponse2008OfferOfferAmount](docs/Model/InlineResponse2008OfferOfferAmount.md)
+- [InlineResponse2008RefundDetails](docs/Model/InlineResponse2008RefundDetails.md)
+- [InlineResponse2008RegulationInfo](docs/Model/InlineResponse2008RegulationInfo.md)
+- [InlineResponse2008Seller](docs/Model/InlineResponse2008Seller.md)
+- [InlineResponse2009](docs/Model/InlineResponse2009.md)
+- [InlineResponse2009Links](docs/Model/InlineResponse2009Links.md)
+- [InlineResponse200BillingCycles](docs/Model/InlineResponse200BillingCycles.md)
+- [InlineResponse200Frequency](docs/Model/InlineResponse200Frequency.md)
+- [InlineResponse200Links](docs/Model/InlineResponse200Links.md)
+- [InlineResponse200Links1](docs/Model/InlineResponse200Links1.md)
+- [InlineResponse200Payee](docs/Model/InlineResponse200Payee.md)
+- [InlineResponse200PayeeDisplayData](docs/Model/InlineResponse200PayeeDisplayData.md)
+- [InlineResponse200PaymentPreferences](docs/Model/InlineResponse200PaymentPreferences.md)
+- [InlineResponse200PaymentPreferencesSetupFee](docs/Model/InlineResponse200PaymentPreferencesSetupFee.md)
+- [InlineResponse200Plans](docs/Model/InlineResponse200Plans.md)
+- [InlineResponse200PricingScheme](docs/Model/InlineResponse200PricingScheme.md)
+- [InlineResponse200PricingSchemeFixedPrice](docs/Model/InlineResponse200PricingSchemeFixedPrice.md)
+- [InlineResponse200Taxes](docs/Model/InlineResponse200Taxes.md)
+- [InlineResponse201](docs/Model/InlineResponse201.md)
+- [InlineResponse2011](docs/Model/InlineResponse2011.md)
+- [InlineResponse20110](docs/Model/InlineResponse20110.md)
+- [InlineResponse20110Amount](docs/Model/InlineResponse20110Amount.md)
+- [InlineResponse20110Links](docs/Model/InlineResponse20110Links.md)
+- [InlineResponse20110SellerReceivableBreakdown](docs/Model/InlineResponse20110SellerReceivableBreakdown.md)
+- [InlineResponse20110SellerReceivableBreakdownNetAmount](docs/Model/InlineResponse20110SellerReceivableBreakdownNetAmount.md)
+- [InlineResponse20110SellerReceivableBreakdownPaypalFee](docs/Model/InlineResponse20110SellerReceivableBreakdownPaypalFee.md)
+- [InlineResponse20111](docs/Model/InlineResponse20111.md)
+- [InlineResponse20111Links](docs/Model/InlineResponse20111Links.md)
+- [InlineResponse20111SupplementaryData](docs/Model/InlineResponse20111SupplementaryData.md)
+- [InlineResponse20111SupplementaryDataRelatedIds](docs/Model/InlineResponse20111SupplementaryDataRelatedIds.md)
+- [InlineResponse20112](docs/Model/InlineResponse20112.md)
+- [InlineResponse20112Links](docs/Model/InlineResponse20112Links.md)
+- [InlineResponse20112SellerPayableBreakdown](docs/Model/InlineResponse20112SellerPayableBreakdown.md)
+- [InlineResponse20112SellerPayableBreakdownNetAmount](docs/Model/InlineResponse20112SellerPayableBreakdownNetAmount.md)
+- [InlineResponse20112SellerPayableBreakdownPaypalFee](docs/Model/InlineResponse20112SellerPayableBreakdownPaypalFee.md)
+- [InlineResponse20113](docs/Model/InlineResponse20113.md)
+- [InlineResponse20113Agreements](docs/Model/InlineResponse20113Agreements.md)
+- [InlineResponse20113BusinessEntity](docs/Model/InlineResponse20113BusinessEntity.md)
+- [InlineResponse20113BusinessEntityAddresses](docs/Model/InlineResponse20113BusinessEntityAddresses.md)
+- [InlineResponse20113BusinessEntityBeneficialOwners](docs/Model/InlineResponse20113BusinessEntityBeneficialOwners.md)
+- [InlineResponse20113BusinessEntityBeneficialOwnersAddresses](docs/Model/InlineResponse20113BusinessEntityBeneficialOwnersAddresses.md)
+- [InlineResponse20113BusinessEntityBeneficialOwnersIdentificationDocuments](docs/Model/InlineResponse20113BusinessEntityBeneficialOwnersIdentificationDocuments.md)
+- [InlineResponse20113BusinessEntityBeneficialOwnersIndividuals](docs/Model/InlineResponse20113BusinessEntityBeneficialOwnersIndividuals.md)
+- [InlineResponse20113BusinessEntityBeneficialOwnersNames](docs/Model/InlineResponse20113BusinessEntityBeneficialOwnersNames.md)
+- [InlineResponse20113BusinessEntityIdentificationDocuments](docs/Model/InlineResponse20113BusinessEntityIdentificationDocuments.md)
+- [InlineResponse20113BusinessEntityIdentificationDocuments1](docs/Model/InlineResponse20113BusinessEntityIdentificationDocuments1.md)
+- [InlineResponse20113BusinessEntityNames](docs/Model/InlineResponse20113BusinessEntityNames.md)
+- [InlineResponse20113BusinessEntityNames1](docs/Model/InlineResponse20113BusinessEntityNames1.md)
+- [InlineResponse20113BusinessEntityOfficeBearers](docs/Model/InlineResponse20113BusinessEntityOfficeBearers.md)
+- [InlineResponse20113BusinessEntityPhoneNumbers](docs/Model/InlineResponse20113BusinessEntityPhoneNumbers.md)
+- [InlineResponse20113Capabilities](docs/Model/InlineResponse20113Capabilities.md)
+- [InlineResponse20113FinancialInstruments](docs/Model/InlineResponse20113FinancialInstruments.md)
+- [InlineResponse20113FinancialInstrumentsAccountHolderDetails](docs/Model/InlineResponse20113FinancialInstrumentsAccountHolderDetails.md)
+- [InlineResponse20113FinancialInstrumentsBanks](docs/Model/InlineResponse20113FinancialInstrumentsBanks.md)
+- [InlineResponse20113IndividualOwners](docs/Model/InlineResponse20113IndividualOwners.md)
+- [InlineResponse20113Limits](docs/Model/InlineResponse20113Limits.md)
+- [InlineResponse20113Links](docs/Model/InlineResponse20113Links.md)
+- [InlineResponse20113Names](docs/Model/InlineResponse20113Names.md)
+- [InlineResponse20113ProcessView](docs/Model/InlineResponse20113ProcessView.md)
+- [InlineResponse20113ProcessViewCapabilities](docs/Model/InlineResponse20113ProcessViewCapabilities.md)
+- [InlineResponse20113ProcessViewProcesses](docs/Model/InlineResponse20113ProcessViewProcesses.md)
+- [InlineResponse2011Links](docs/Model/InlineResponse2011Links.md)
+- [InlineResponse2012](docs/Model/InlineResponse2012.md)
+- [InlineResponse2012Links](docs/Model/InlineResponse2012Links.md)
+- [InlineResponse2013](docs/Model/InlineResponse2013.md)
+- [InlineResponse2013EventTypes](docs/Model/InlineResponse2013EventTypes.md)
+- [InlineResponse2013Links](docs/Model/InlineResponse2013Links.md)
+- [InlineResponse2014](docs/Model/InlineResponse2014.md)
+- [InlineResponse2014BatchHeader](docs/Model/InlineResponse2014BatchHeader.md)
+- [InlineResponse2014BatchHeaderSenderBatchHeader](docs/Model/InlineResponse2014BatchHeaderSenderBatchHeader.md)
+- [InlineResponse2014Links](docs/Model/InlineResponse2014Links.md)
+- [InlineResponse2015](docs/Model/InlineResponse2015.md)
+- [InlineResponse2015Links](docs/Model/InlineResponse2015Links.md)
+- [InlineResponse2015Payee](docs/Model/InlineResponse2015Payee.md)
+- [InlineResponse2015PaymentSource](docs/Model/InlineResponse2015PaymentSource.md)
+- [InlineResponse2015PaymentSourceCard](docs/Model/InlineResponse2015PaymentSourceCard.md)
+- [InlineResponse2015Payments](docs/Model/InlineResponse2015Payments.md)
+- [InlineResponse2015PaymentsCaptures](docs/Model/InlineResponse2015PaymentsCaptures.md)
+- [InlineResponse2015PaymentsLinks](docs/Model/InlineResponse2015PaymentsLinks.md)
+- [InlineResponse2015PaymentsNetworkTransactionReference](docs/Model/InlineResponse2015PaymentsNetworkTransactionReference.md)
+- [InlineResponse2015PaymentsSellerReceivableBreakdown](docs/Model/InlineResponse2015PaymentsSellerReceivableBreakdown.md)
+- [InlineResponse2015PaymentsSellerReceivableBreakdownNetAmount](docs/Model/InlineResponse2015PaymentsSellerReceivableBreakdownNetAmount.md)
+- [InlineResponse2015PaymentsSellerReceivableBreakdownPaypalFee](docs/Model/InlineResponse2015PaymentsSellerReceivableBreakdownPaypalFee.md)
+- [InlineResponse2015PurchaseUnits](docs/Model/InlineResponse2015PurchaseUnits.md)
+- [InlineResponse2016](docs/Model/InlineResponse2016.md)
+- [InlineResponse2016Links](docs/Model/InlineResponse2016Links.md)
+- [InlineResponse2016Payments](docs/Model/InlineResponse2016Payments.md)
+- [InlineResponse2016PaymentsAuthorizations](docs/Model/InlineResponse2016PaymentsAuthorizations.md)
+- [InlineResponse2016PaymentsLinks](docs/Model/InlineResponse2016PaymentsLinks.md)
+- [InlineResponse2016PurchaseUnits](docs/Model/InlineResponse2016PurchaseUnits.md)
+- [InlineResponse2017](docs/Model/InlineResponse2017.md)
+- [InlineResponse2017Links](docs/Model/InlineResponse2017Links.md)
+- [InlineResponse2017Payments](docs/Model/InlineResponse2017Payments.md)
+- [InlineResponse2017PaymentsCaptures](docs/Model/InlineResponse2017PaymentsCaptures.md)
+- [InlineResponse2017PaymentsLinks](docs/Model/InlineResponse2017PaymentsLinks.md)
+- [InlineResponse2017PurchaseUnits](docs/Model/InlineResponse2017PurchaseUnits.md)
+- [InlineResponse2018](docs/Model/InlineResponse2018.md)
+- [InlineResponse2018Amount](docs/Model/InlineResponse2018Amount.md)
+- [InlineResponse2018AmountBreakdown](docs/Model/InlineResponse2018AmountBreakdown.md)
+- [InlineResponse2018AmountBreakdownDiscount](docs/Model/InlineResponse2018AmountBreakdownDiscount.md)
+- [InlineResponse2018AmountBreakdownDiscountInvoiceDiscount](docs/Model/InlineResponse2018AmountBreakdownDiscountInvoiceDiscount.md)
+- [InlineResponse2018AmountBreakdownDiscountInvoiceDiscountAmount](docs/Model/InlineResponse2018AmountBreakdownDiscountInvoiceDiscountAmount.md)
+- [InlineResponse2018Configuration](docs/Model/InlineResponse2018Configuration.md)
+- [InlineResponse2018Detail](docs/Model/InlineResponse2018Detail.md)
+- [InlineResponse2018DetailMetadata](docs/Model/InlineResponse2018DetailMetadata.md)
+- [InlineResponse2018DetailPaymentTerm](docs/Model/InlineResponse2018DetailPaymentTerm.md)
+- [InlineResponse2018Links](docs/Model/InlineResponse2018Links.md)
+- [InlineResponse2019](docs/Model/InlineResponse2019.md)
+- [InlineResponse2019Links](docs/Model/InlineResponse2019Links.md)
+- [InlineResponse2019TemplateInfo](docs/Model/InlineResponse2019TemplateInfo.md)
+- [InlineResponse2019TemplateInfoAmount](docs/Model/InlineResponse2019TemplateInfoAmount.md)
+- [InlineResponse2019TemplateInfoAmountBreakdown](docs/Model/InlineResponse2019TemplateInfoAmountBreakdown.md)
+- [InlineResponse2019TemplateInfoAmountBreakdownShipping](docs/Model/InlineResponse2019TemplateInfoAmountBreakdownShipping.md)
+- [InlineResponse2019TemplateInfoAmountBreakdownShippingTax](docs/Model/InlineResponse2019TemplateInfoAmountBreakdownShippingTax.md)
+- [InlineResponse2019TemplateInfoBillingInfo](docs/Model/InlineResponse2019TemplateInfoBillingInfo.md)
+- [InlineResponse2019TemplateInfoDetail](docs/Model/InlineResponse2019TemplateInfoDetail.md)
+- [InlineResponse2019TemplateInfoDetailAttachments](docs/Model/InlineResponse2019TemplateInfoDetailAttachments.md)
+- [InlineResponse2019TemplateInfoDetailMetadata](docs/Model/InlineResponse2019TemplateInfoDetailMetadata.md)
+- [InlineResponse2019TemplateInfoDiscount](docs/Model/InlineResponse2019TemplateInfoDiscount.md)
+- [InlineResponse2019TemplateInfoDiscountAmount](docs/Model/InlineResponse2019TemplateInfoDiscountAmount.md)
+- [InlineResponse2019TemplateInfoInvoicer](docs/Model/InlineResponse2019TemplateInfoInvoicer.md)
+- [InlineResponse2019TemplateInfoItems](docs/Model/InlineResponse2019TemplateInfoItems.md)
+- [InlineResponse2019TemplateInfoPrimaryRecipients](docs/Model/InlineResponse2019TemplateInfoPrimaryRecipients.md)
+- [InlineResponse201BillingCycles](docs/Model/InlineResponse201BillingCycles.md)
+- [InlineResponse201Links](docs/Model/InlineResponse201Links.md)
+- [InlineResponse201PricingScheme](docs/Model/InlineResponse201PricingScheme.md)
+- [InlineResponse202](docs/Model/InlineResponse202.md)
+- [InlineResponse2021](docs/Model/InlineResponse2021.md)
+- [InlineResponse202Links](docs/Model/InlineResponse202Links.md)
+- [InlineResponse202Resource](docs/Model/InlineResponse202Resource.md)
+- [InlineResponse202ResourceDisputeAmount](docs/Model/InlineResponse202ResourceDisputeAmount.md)
+- [InlineResponse202ResourceDisputedTransactions](docs/Model/InlineResponse202ResourceDisputedTransactions.md)
+- [InlineResponse202ResourceLinks](docs/Model/InlineResponse202ResourceLinks.md)
+- [InlineResponse202ResourceMessages](docs/Model/InlineResponse202ResourceMessages.md)
+- [InlineResponse202ResourceSeller](docs/Model/InlineResponse202ResourceSeller.md)
+- [InlineResponse400](docs/Model/InlineResponse400.md)
+- [InlineResponse4001](docs/Model/InlineResponse4001.md)
+- [InlineResponse40010](docs/Model/InlineResponse40010.md)
+- [InlineResponse40011](docs/Model/InlineResponse40011.md)
+- [InlineResponse40012](docs/Model/InlineResponse40012.md)
+- [InlineResponse40013](docs/Model/InlineResponse40013.md)
+- [InlineResponse40013Details](docs/Model/InlineResponse40013Details.md)
+- [InlineResponse40014](docs/Model/InlineResponse40014.md)
+- [InlineResponse40015](docs/Model/InlineResponse40015.md)
+- [InlineResponse40016](docs/Model/InlineResponse40016.md)
+- [InlineResponse40017](docs/Model/InlineResponse40017.md)
+- [InlineResponse40017Details](docs/Model/InlineResponse40017Details.md)
+- [InlineResponse40018](docs/Model/InlineResponse40018.md)
+- [InlineResponse40018Details](docs/Model/InlineResponse40018Details.md)
+- [InlineResponse40019](docs/Model/InlineResponse40019.md)
+- [InlineResponse40019Details](docs/Model/InlineResponse40019Details.md)
+- [InlineResponse4001Details](docs/Model/InlineResponse4001Details.md)
+- [InlineResponse4002](docs/Model/InlineResponse4002.md)
+- [InlineResponse40020](docs/Model/InlineResponse40020.md)
+- [InlineResponse40020Details](docs/Model/InlineResponse40020Details.md)
+- [InlineResponse40021](docs/Model/InlineResponse40021.md)
+- [InlineResponse40022](docs/Model/InlineResponse40022.md)
+- [InlineResponse40022Details](docs/Model/InlineResponse40022Details.md)
+- [InlineResponse40022Links](docs/Model/InlineResponse40022Links.md)
+- [InlineResponse40023](docs/Model/InlineResponse40023.md)
+- [InlineResponse40023Details](docs/Model/InlineResponse40023Details.md)
+- [InlineResponse40023Links](docs/Model/InlineResponse40023Links.md)
+- [InlineResponse40024](docs/Model/InlineResponse40024.md)
+- [InlineResponse40024Details](docs/Model/InlineResponse40024Details.md)
+- [InlineResponse40025](docs/Model/InlineResponse40025.md)
+- [InlineResponse40025Details](docs/Model/InlineResponse40025Details.md)
+- [InlineResponse40025Links](docs/Model/InlineResponse40025Links.md)
+- [InlineResponse40026](docs/Model/InlineResponse40026.md)
+- [InlineResponse40026Details](docs/Model/InlineResponse40026Details.md)
+- [InlineResponse40027](docs/Model/InlineResponse40027.md)
+- [InlineResponse40027Details](docs/Model/InlineResponse40027Details.md)
+- [InlineResponse40028](docs/Model/InlineResponse40028.md)
+- [InlineResponse40028Details](docs/Model/InlineResponse40028Details.md)
+- [InlineResponse40029](docs/Model/InlineResponse40029.md)
+- [InlineResponse40029Details](docs/Model/InlineResponse40029Details.md)
+- [InlineResponse4002Details](docs/Model/InlineResponse4002Details.md)
+- [InlineResponse4003](docs/Model/InlineResponse4003.md)
+- [InlineResponse40030](docs/Model/InlineResponse40030.md)
+- [InlineResponse40030Details](docs/Model/InlineResponse40030Details.md)
+- [InlineResponse40030Links](docs/Model/InlineResponse40030Links.md)
+- [InlineResponse40031](docs/Model/InlineResponse40031.md)
+- [InlineResponse40031Details](docs/Model/InlineResponse40031Details.md)
+- [InlineResponse40032](docs/Model/InlineResponse40032.md)
+- [InlineResponse40032Details](docs/Model/InlineResponse40032Details.md)
+- [InlineResponse4003Details](docs/Model/InlineResponse4003Details.md)
+- [InlineResponse4004](docs/Model/InlineResponse4004.md)
+- [InlineResponse4004Details](docs/Model/InlineResponse4004Details.md)
+- [InlineResponse4005](docs/Model/InlineResponse4005.md)
+- [InlineResponse4005Details](docs/Model/InlineResponse4005Details.md)
+- [InlineResponse4006](docs/Model/InlineResponse4006.md)
+- [InlineResponse4006Details](docs/Model/InlineResponse4006Details.md)
+- [InlineResponse4007](docs/Model/InlineResponse4007.md)
+- [InlineResponse4008](docs/Model/InlineResponse4008.md)
+- [InlineResponse4008Details](docs/Model/InlineResponse4008Details.md)
+- [InlineResponse4009](docs/Model/InlineResponse4009.md)
+- [InlineResponse400Details](docs/Model/InlineResponse400Details.md)
+- [InlineResponse400Links](docs/Model/InlineResponse400Links.md)
+- [InlineResponse401](docs/Model/InlineResponse401.md)
+- [InlineResponse4011](docs/Model/InlineResponse4011.md)
+- [InlineResponse4012](docs/Model/InlineResponse4012.md)
+- [InlineResponse4013](docs/Model/InlineResponse4013.md)
+- [InlineResponse4013Links](docs/Model/InlineResponse4013Links.md)
+- [InlineResponse4014](docs/Model/InlineResponse4014.md)
+- [InlineResponse4015](docs/Model/InlineResponse4015.md)
+- [InlineResponse403](docs/Model/InlineResponse403.md)
+- [InlineResponse4031](docs/Model/InlineResponse4031.md)
+- [InlineResponse40310](docs/Model/InlineResponse40310.md)
+- [InlineResponse40311](docs/Model/InlineResponse40311.md)
+- [InlineResponse40312](docs/Model/InlineResponse40312.md)
+- [InlineResponse40312Details](docs/Model/InlineResponse40312Details.md)
+- [InlineResponse40313](docs/Model/InlineResponse40313.md)
+- [InlineResponse40313Details](docs/Model/InlineResponse40313Details.md)
+- [InlineResponse40313Errors](docs/Model/InlineResponse40313Errors.md)
+- [InlineResponse40314](docs/Model/InlineResponse40314.md)
+- [InlineResponse40314Details](docs/Model/InlineResponse40314Details.md)
+- [InlineResponse40314Links](docs/Model/InlineResponse40314Links.md)
+- [InlineResponse40315](docs/Model/InlineResponse40315.md)
+- [InlineResponse40316](docs/Model/InlineResponse40316.md)
+- [InlineResponse40317](docs/Model/InlineResponse40317.md)
+- [InlineResponse40317Details](docs/Model/InlineResponse40317Details.md)
+- [InlineResponse40318](docs/Model/InlineResponse40318.md)
+- [InlineResponse40318Details](docs/Model/InlineResponse40318Details.md)
+- [InlineResponse4032](docs/Model/InlineResponse4032.md)
+- [InlineResponse4033](docs/Model/InlineResponse4033.md)
+- [InlineResponse4034](docs/Model/InlineResponse4034.md)
+- [InlineResponse4035](docs/Model/InlineResponse4035.md)
+- [InlineResponse4036](docs/Model/InlineResponse4036.md)
+- [InlineResponse4037](docs/Model/InlineResponse4037.md)
+- [InlineResponse4038](docs/Model/InlineResponse4038.md)
+- [InlineResponse4039](docs/Model/InlineResponse4039.md)
+- [InlineResponse403Details](docs/Model/InlineResponse403Details.md)
+- [InlineResponse404](docs/Model/InlineResponse404.md)
+- [InlineResponse4041](docs/Model/InlineResponse4041.md)
+- [InlineResponse40410](docs/Model/InlineResponse40410.md)
+- [InlineResponse40411](docs/Model/InlineResponse40411.md)
+- [InlineResponse40412](docs/Model/InlineResponse40412.md)
+- [InlineResponse40413](docs/Model/InlineResponse40413.md)
+- [InlineResponse40414](docs/Model/InlineResponse40414.md)
+- [InlineResponse40415](docs/Model/InlineResponse40415.md)
+- [InlineResponse40416](docs/Model/InlineResponse40416.md)
+- [InlineResponse40417](docs/Model/InlineResponse40417.md)
+- [InlineResponse40418](docs/Model/InlineResponse40418.md)
+- [InlineResponse40418Details](docs/Model/InlineResponse40418Details.md)
+- [InlineResponse40419](docs/Model/InlineResponse40419.md)
+- [InlineResponse4042](docs/Model/InlineResponse4042.md)
+- [InlineResponse40420](docs/Model/InlineResponse40420.md)
+- [InlineResponse40421](docs/Model/InlineResponse40421.md)
+- [InlineResponse40422](docs/Model/InlineResponse40422.md)
+- [InlineResponse40423](docs/Model/InlineResponse40423.md)
+- [InlineResponse40424](docs/Model/InlineResponse40424.md)
+- [InlineResponse40425](docs/Model/InlineResponse40425.md)
+- [InlineResponse40426](docs/Model/InlineResponse40426.md)
+- [InlineResponse40427](docs/Model/InlineResponse40427.md)
+- [InlineResponse40428](docs/Model/InlineResponse40428.md)
+- [InlineResponse40429](docs/Model/InlineResponse40429.md)
+- [InlineResponse4042Details](docs/Model/InlineResponse4042Details.md)
+- [InlineResponse4043](docs/Model/InlineResponse4043.md)
+- [InlineResponse40430](docs/Model/InlineResponse40430.md)
+- [InlineResponse40431](docs/Model/InlineResponse40431.md)
+- [InlineResponse40432](docs/Model/InlineResponse40432.md)
+- [InlineResponse40433](docs/Model/InlineResponse40433.md)
+- [InlineResponse40434](docs/Model/InlineResponse40434.md)
+- [InlineResponse40435](docs/Model/InlineResponse40435.md)
+- [InlineResponse40436](docs/Model/InlineResponse40436.md)
+- [InlineResponse40437](docs/Model/InlineResponse40437.md)
+- [InlineResponse40438](docs/Model/InlineResponse40438.md)
+- [InlineResponse40438Details](docs/Model/InlineResponse40438Details.md)
+- [InlineResponse40439](docs/Model/InlineResponse40439.md)
+- [InlineResponse40439Details](docs/Model/InlineResponse40439Details.md)
+- [InlineResponse4044](docs/Model/InlineResponse4044.md)
+- [InlineResponse40440](docs/Model/InlineResponse40440.md)
+- [InlineResponse40440Details](docs/Model/InlineResponse40440Details.md)
+- [InlineResponse40440Links](docs/Model/InlineResponse40440Links.md)
+- [InlineResponse40441](docs/Model/InlineResponse40441.md)
+- [InlineResponse40442](docs/Model/InlineResponse40442.md)
+- [InlineResponse40442Details](docs/Model/InlineResponse40442Details.md)
+- [InlineResponse40443](docs/Model/InlineResponse40443.md)
+- [InlineResponse40444](docs/Model/InlineResponse40444.md)
+- [InlineResponse40445](docs/Model/InlineResponse40445.md)
+- [InlineResponse40446](docs/Model/InlineResponse40446.md)
+- [InlineResponse40447](docs/Model/InlineResponse40447.md)
+- [InlineResponse40448](docs/Model/InlineResponse40448.md)
+- [InlineResponse40449](docs/Model/InlineResponse40449.md)
+- [InlineResponse4045](docs/Model/InlineResponse4045.md)
+- [InlineResponse40450](docs/Model/InlineResponse40450.md)
+- [InlineResponse40451](docs/Model/InlineResponse40451.md)
+- [InlineResponse40452](docs/Model/InlineResponse40452.md)
+- [InlineResponse40453](docs/Model/InlineResponse40453.md)
+- [InlineResponse40454](docs/Model/InlineResponse40454.md)
+- [InlineResponse40455](docs/Model/InlineResponse40455.md)
+- [InlineResponse40456](docs/Model/InlineResponse40456.md)
+- [InlineResponse40457](docs/Model/InlineResponse40457.md)
+- [InlineResponse40458](docs/Model/InlineResponse40458.md)
+- [InlineResponse40458Links](docs/Model/InlineResponse40458Links.md)
+- [InlineResponse40459](docs/Model/InlineResponse40459.md)
+- [InlineResponse4046](docs/Model/InlineResponse4046.md)
+- [InlineResponse40460](docs/Model/InlineResponse40460.md)
+- [InlineResponse40461](docs/Model/InlineResponse40461.md)
+- [InlineResponse40462](docs/Model/InlineResponse40462.md)
+- [InlineResponse40462Details](docs/Model/InlineResponse40462Details.md)
+- [InlineResponse40463](docs/Model/InlineResponse40463.md)
+- [InlineResponse40463Details](docs/Model/InlineResponse40463Details.md)
+- [InlineResponse40464](docs/Model/InlineResponse40464.md)
+- [InlineResponse40465](docs/Model/InlineResponse40465.md)
+- [InlineResponse40466](docs/Model/InlineResponse40466.md)
+- [InlineResponse4047](docs/Model/InlineResponse4047.md)
+- [InlineResponse4047Details](docs/Model/InlineResponse4047Details.md)
+- [InlineResponse4048](docs/Model/InlineResponse4048.md)
+- [InlineResponse4049](docs/Model/InlineResponse4049.md)
+- [InlineResponse404Details](docs/Model/InlineResponse404Details.md)
+- [InlineResponse404Links](docs/Model/InlineResponse404Links.md)
+- [InlineResponse422](docs/Model/InlineResponse422.md)
+- [InlineResponse4221](docs/Model/InlineResponse4221.md)
+- [InlineResponse42210](docs/Model/InlineResponse42210.md)
+- [InlineResponse42210Details](docs/Model/InlineResponse42210Details.md)
+- [InlineResponse42211](docs/Model/InlineResponse42211.md)
+- [InlineResponse42211Details](docs/Model/InlineResponse42211Details.md)
+- [InlineResponse42212](docs/Model/InlineResponse42212.md)
+- [InlineResponse42212Details](docs/Model/InlineResponse42212Details.md)
+- [InlineResponse42213](docs/Model/InlineResponse42213.md)
+- [InlineResponse42214](docs/Model/InlineResponse42214.md)
+- [InlineResponse42215](docs/Model/InlineResponse42215.md)
+- [InlineResponse42216](docs/Model/InlineResponse42216.md)
+- [InlineResponse42217](docs/Model/InlineResponse42217.md)
+- [InlineResponse42217Details](docs/Model/InlineResponse42217Details.md)
+- [InlineResponse42217Links](docs/Model/InlineResponse42217Links.md)
+- [InlineResponse42218](docs/Model/InlineResponse42218.md)
+- [InlineResponse42218Details](docs/Model/InlineResponse42218Details.md)
+- [InlineResponse42218Links](docs/Model/InlineResponse42218Links.md)
+- [InlineResponse42219](docs/Model/InlineResponse42219.md)
+- [InlineResponse42219Details](docs/Model/InlineResponse42219Details.md)
+- [InlineResponse42219Links](docs/Model/InlineResponse42219Links.md)
+- [InlineResponse4221Details](docs/Model/InlineResponse4221Details.md)
+- [InlineResponse4222](docs/Model/InlineResponse4222.md)
+- [InlineResponse42220](docs/Model/InlineResponse42220.md)
+- [InlineResponse42220Details](docs/Model/InlineResponse42220Details.md)
+- [InlineResponse42220Links](docs/Model/InlineResponse42220Links.md)
+- [InlineResponse42221](docs/Model/InlineResponse42221.md)
+- [InlineResponse42221Details](docs/Model/InlineResponse42221Details.md)
+- [InlineResponse42222](docs/Model/InlineResponse42222.md)
+- [InlineResponse42222Details](docs/Model/InlineResponse42222Details.md)
+- [InlineResponse42223](docs/Model/InlineResponse42223.md)
+- [InlineResponse42223Details](docs/Model/InlineResponse42223Details.md)
+- [InlineResponse42224](docs/Model/InlineResponse42224.md)
+- [InlineResponse42224Details](docs/Model/InlineResponse42224Details.md)
+- [InlineResponse42225](docs/Model/InlineResponse42225.md)
+- [InlineResponse42225Details](docs/Model/InlineResponse42225Details.md)
+- [InlineResponse42226](docs/Model/InlineResponse42226.md)
+- [InlineResponse42226Details](docs/Model/InlineResponse42226Details.md)
+- [InlineResponse42226Links](docs/Model/InlineResponse42226Links.md)
+- [InlineResponse42227](docs/Model/InlineResponse42227.md)
+- [InlineResponse42227Details](docs/Model/InlineResponse42227Details.md)
+- [InlineResponse42227Links](docs/Model/InlineResponse42227Links.md)
+- [InlineResponse42228](docs/Model/InlineResponse42228.md)
+- [InlineResponse42228Details](docs/Model/InlineResponse42228Details.md)
+- [InlineResponse42228Links](docs/Model/InlineResponse42228Links.md)
+- [InlineResponse42229](docs/Model/InlineResponse42229.md)
+- [InlineResponse42229Details](docs/Model/InlineResponse42229Details.md)
+- [InlineResponse42229Links](docs/Model/InlineResponse42229Links.md)
+- [InlineResponse4222Details](docs/Model/InlineResponse4222Details.md)
+- [InlineResponse4223](docs/Model/InlineResponse4223.md)
+- [InlineResponse42230](docs/Model/InlineResponse42230.md)
+- [InlineResponse42230Details](docs/Model/InlineResponse42230Details.md)
+- [InlineResponse42231](docs/Model/InlineResponse42231.md)
+- [InlineResponse42231Details](docs/Model/InlineResponse42231Details.md)
+- [InlineResponse4223Details](docs/Model/InlineResponse4223Details.md)
+- [InlineResponse4224](docs/Model/InlineResponse4224.md)
+- [InlineResponse4224Details](docs/Model/InlineResponse4224Details.md)
+- [InlineResponse4225](docs/Model/InlineResponse4225.md)
+- [InlineResponse4225Details](docs/Model/InlineResponse4225Details.md)
+- [InlineResponse4226](docs/Model/InlineResponse4226.md)
+- [InlineResponse4226Details](docs/Model/InlineResponse4226Details.md)
+- [InlineResponse4227](docs/Model/InlineResponse4227.md)
+- [InlineResponse4227Details](docs/Model/InlineResponse4227Details.md)
+- [InlineResponse4228](docs/Model/InlineResponse4228.md)
+- [InlineResponse4228Details](docs/Model/InlineResponse4228Details.md)
+- [InlineResponse4229](docs/Model/InlineResponse4229.md)
+- [InlineResponse4229Details](docs/Model/InlineResponse4229Details.md)
+- [InlineResponse422Details](docs/Model/InlineResponse422Details.md)
+- [InlineResponse422Links](docs/Model/InlineResponse422Links.md)
+- [InlineResponse429](docs/Model/InlineResponse429.md)
+- [InlineResponse4291](docs/Model/InlineResponse4291.md)
+- [InlineResponse500](docs/Model/InlineResponse500.md)
+- [V1billingplansBillingCycles](docs/Model/V1billingplansBillingCycles.md)
+- [V1billingplansPaymentPreferences](docs/Model/V1billingplansPaymentPreferences.md)
+- [V1billingplansPaymentPreferencesSetupFee](docs/Model/V1billingplansPaymentPreferencesSetupFee.md)
+- [V1billingplansPricingScheme](docs/Model/V1billingplansPricingScheme.md)
+- [V1billingplansPricingSchemeFixedPrice](docs/Model/V1billingplansPricingSchemeFixedPrice.md)
+- [V1billingplansTaxes](docs/Model/V1billingplansTaxes.md)
+- [V1billingplansbillingPlanIdupdatepricingschemesPricingScheme](docs/Model/V1billingplansbillingPlanIdupdatepricingschemesPricingScheme.md)
+- [V1billingplansbillingPlanIdupdatepricingschemesPricingSchemeRollOutStrategy](docs/Model/V1billingplansbillingPlanIdupdatepricingschemesPricingSchemeRollOutStrategy.md)
+- [V1billingplansbillingPlanIdupdatepricingschemesPricingSchemes](docs/Model/V1billingplansbillingPlanIdupdatepricingschemesPricingSchemes.md)
+- [V1billingsubscriptionsApplicationContext](docs/Model/V1billingsubscriptionsApplicationContext.md)
+- [V1billingsubscriptionsApplicationContextPaymentMethod](docs/Model/V1billingsubscriptionsApplicationContextPaymentMethod.md)
+- [V1billingsubscriptionsShippingAmount](docs/Model/V1billingsubscriptionsShippingAmount.md)
+- [V1billingsubscriptionsSubscriber](docs/Model/V1billingsubscriptionsSubscriber.md)
+- [V1billingsubscriptionsSubscriberName](docs/Model/V1billingsubscriptionsSubscriberName.md)
+- [V1billingsubscriptionsSubscriberShippingAddress](docs/Model/V1billingsubscriptionsSubscriberShippingAddress.md)
+- [V1billingsubscriptionsSubscriberShippingAddressAddress](docs/Model/V1billingsubscriptionsSubscriberShippingAddressAddress.md)
+- [V1billingsubscriptionsSubscriberShippingAddressName](docs/Model/V1billingsubscriptionsSubscriberShippingAddressName.md)
+- [V1billingsubscriptionssubscriptionIdcaptureAmount](docs/Model/V1billingsubscriptionssubscriptionIdcaptureAmount.md)
+- [V1billingsubscriptionssubscriptionIdreviseApplicationContext](docs/Model/V1billingsubscriptionssubscriptionIdreviseApplicationContext.md)
+- [V1customerdisputesdisputeIdValue](docs/Model/V1customerdisputesdisputeIdValue.md)
+- [V1customerdisputesdisputeIdmakeofferOfferAmount](docs/Model/V1customerdisputesdisputeIdmakeofferOfferAmount.md)
+- [V1notificationswebhooksEventTypes](docs/Model/V1notificationswebhooksEventTypes.md)
+- [V1notificationswebhookswebhookIdValue](docs/Model/V1notificationswebhookswebhookIdValue.md)
+- [V1paymentspayoutsAmount](docs/Model/V1paymentspayoutsAmount.md)
+- [V1paymentspayoutsItems](docs/Model/V1paymentspayoutsItems.md)
+- [V1paymentspayoutsSenderBatchHeader](docs/Model/V1paymentspayoutsSenderBatchHeader.md)
+- [V1shippingtrackersbatchTrackers](docs/Model/V1shippingtrackersbatchTrackers.md)
+- [V2checkoutordersAmount](docs/Model/V2checkoutordersAmount.md)
+- [V2checkoutordersAmountBreakdown](docs/Model/V2checkoutordersAmountBreakdown.md)
+- [V2checkoutordersApplicationContext](docs/Model/V2checkoutordersApplicationContext.md)
+- [V2checkoutordersItems](docs/Model/V2checkoutordersItems.md)
+- [V2checkoutordersPurchaseUnits](docs/Model/V2checkoutordersPurchaseUnits.md)
+- [V2invoicinginvoicesAmount](docs/Model/V2invoicinginvoicesAmount.md)
+- [V2invoicinginvoicesAmountBreakdown](docs/Model/V2invoicinginvoicesAmountBreakdown.md)
+- [V2invoicinginvoicesAmountBreakdownCustom](docs/Model/V2invoicinginvoicesAmountBreakdownCustom.md)
+- [V2invoicinginvoicesAmountBreakdownDiscount](docs/Model/V2invoicinginvoicesAmountBreakdownDiscount.md)
+- [V2invoicinginvoicesAmountBreakdownDiscountInvoiceDiscount](docs/Model/V2invoicinginvoicesAmountBreakdownDiscountInvoiceDiscount.md)
+- [V2invoicinginvoicesAmountBreakdownShipping](docs/Model/V2invoicinginvoicesAmountBreakdownShipping.md)
+- [V2invoicinginvoicesAmountBreakdownShippingTax](docs/Model/V2invoicinginvoicesAmountBreakdownShippingTax.md)
+- [V2invoicinginvoicesBillingInfo](docs/Model/V2invoicinginvoicesBillingInfo.md)
+- [V2invoicinginvoicesBillingInfoAddress](docs/Model/V2invoicinginvoicesBillingInfoAddress.md)
+- [V2invoicinginvoicesBillingInfoName](docs/Model/V2invoicinginvoicesBillingInfoName.md)
+- [V2invoicinginvoicesBillingInfoPhones](docs/Model/V2invoicinginvoicesBillingInfoPhones.md)
+- [V2invoicinginvoicesConfiguration](docs/Model/V2invoicinginvoicesConfiguration.md)
+- [V2invoicinginvoicesConfigurationPartialPayment](docs/Model/V2invoicinginvoicesConfigurationPartialPayment.md)
+- [V2invoicinginvoicesConfigurationPartialPaymentMinimumAmountDue](docs/Model/V2invoicinginvoicesConfigurationPartialPaymentMinimumAmountDue.md)
+- [V2invoicinginvoicesDetail](docs/Model/V2invoicinginvoicesDetail.md)
+- [V2invoicinginvoicesDetailPaymentTerm](docs/Model/V2invoicinginvoicesDetailPaymentTerm.md)
+- [V2invoicinginvoicesDiscount](docs/Model/V2invoicinginvoicesDiscount.md)
+- [V2invoicinginvoicesDiscountAmount](docs/Model/V2invoicinginvoicesDiscountAmount.md)
+- [V2invoicinginvoicesInvoicer](docs/Model/V2invoicinginvoicesInvoicer.md)
+- [V2invoicinginvoicesInvoicerAddress](docs/Model/V2invoicinginvoicesInvoicerAddress.md)
+- [V2invoicinginvoicesInvoicerName](docs/Model/V2invoicinginvoicesInvoicerName.md)
+- [V2invoicinginvoicesInvoicerPhones](docs/Model/V2invoicinginvoicesInvoicerPhones.md)
+- [V2invoicinginvoicesItems](docs/Model/V2invoicinginvoicesItems.md)
+- [V2invoicinginvoicesPrimaryRecipients](docs/Model/V2invoicinginvoicesPrimaryRecipients.md)
+- [V2invoicinginvoicesShippingInfo](docs/Model/V2invoicinginvoicesShippingInfo.md)
+- [V2invoicinginvoicesUnitAmount](docs/Model/V2invoicinginvoicesUnitAmount.md)
+- [V2invoicinginvoicesinvoiceIdAmount](docs/Model/V2invoicinginvoicesinvoiceIdAmount.md)
+- [V2invoicinginvoicesinvoiceIdAmountBreakdown](docs/Model/V2invoicinginvoicesinvoiceIdAmountBreakdown.md)
+- [V2invoicinginvoicesinvoiceIdAmountBreakdownShipping](docs/Model/V2invoicinginvoicesinvoiceIdAmountBreakdownShipping.md)
+- [V2invoicinginvoicesinvoiceIdAmountBreakdownShippingTax](docs/Model/V2invoicinginvoicesinvoiceIdAmountBreakdownShippingTax.md)
+- [V2invoicinginvoicesinvoiceIdBillingInfo](docs/Model/V2invoicinginvoicesinvoiceIdBillingInfo.md)
+- [V2invoicinginvoicesinvoiceIdDetail](docs/Model/V2invoicinginvoicesinvoiceIdDetail.md)
+- [V2invoicinginvoicesinvoiceIdDetailPaymentTerm](docs/Model/V2invoicinginvoicesinvoiceIdDetailPaymentTerm.md)
+- [V2invoicinginvoicesinvoiceIdDiscount](docs/Model/V2invoicinginvoicesinvoiceIdDiscount.md)
+- [V2invoicinginvoicesinvoiceIdDiscountAmount](docs/Model/V2invoicinginvoicesinvoiceIdDiscountAmount.md)
+- [V2invoicinginvoicesinvoiceIdInvoicer](docs/Model/V2invoicinginvoicesinvoiceIdInvoicer.md)
+- [V2invoicinginvoicesinvoiceIdItems](docs/Model/V2invoicinginvoicesinvoiceIdItems.md)
+- [V2invoicinginvoicesinvoiceIdPrimaryRecipients](docs/Model/V2invoicinginvoicesinvoiceIdPrimaryRecipients.md)
+- [V2invoicinginvoicesinvoiceIdTax](docs/Model/V2invoicinginvoicesinvoiceIdTax.md)
+- [V2invoicingsearchinvoicesInvoiceDateRange](docs/Model/V2invoicingsearchinvoicesInvoiceDateRange.md)
+- [V2invoicingsearchinvoicesTotalAmountRange](docs/Model/V2invoicingsearchinvoicesTotalAmountRange.md)
+- [V2invoicingtemplatesSettings](docs/Model/V2invoicingtemplatesSettings.md)
+- [V2invoicingtemplatesSettingsDisplayPreference](docs/Model/V2invoicingtemplatesSettingsDisplayPreference.md)
+- [V2invoicingtemplatesSettingsTemplateSubtotalSettings](docs/Model/V2invoicingtemplatesSettingsTemplateSubtotalSettings.md)
+- [V2invoicingtemplatesTemplateInfo](docs/Model/V2invoicingtemplatesTemplateInfo.md)
+- [V2invoicingtemplatesTemplateInfoAmount](docs/Model/V2invoicingtemplatesTemplateInfoAmount.md)
+- [V2invoicingtemplatesTemplateInfoBillingInfo](docs/Model/V2invoicingtemplatesTemplateInfoBillingInfo.md)
+- [V2invoicingtemplatesTemplateInfoBillingInfoPhones](docs/Model/V2invoicingtemplatesTemplateInfoBillingInfoPhones.md)
+- [V2invoicingtemplatesTemplateInfoDetail](docs/Model/V2invoicingtemplatesTemplateInfoDetail.md)
+- [V2invoicingtemplatesTemplateInfoDetailAttachments](docs/Model/V2invoicingtemplatesTemplateInfoDetailAttachments.md)
+- [V2invoicingtemplatesTemplateInfoDetailPaymentTerm](docs/Model/V2invoicingtemplatesTemplateInfoDetailPaymentTerm.md)
+- [V2invoicingtemplatesTemplateInfoInvoicer](docs/Model/V2invoicingtemplatesTemplateInfoInvoicer.md)
+- [V2invoicingtemplatesTemplateInfoItems](docs/Model/V2invoicingtemplatesTemplateInfoItems.md)
+- [V2invoicingtemplatesTemplateInfoPrimaryRecipients](docs/Model/V2invoicingtemplatesTemplateInfoPrimaryRecipients.md)
+- [V2invoicingtemplatestemplateIdTemplateInfo](docs/Model/V2invoicingtemplatestemplateIdTemplateInfo.md)
+- [V2invoicingtemplatestemplateIdTemplateInfoDetail](docs/Model/V2invoicingtemplatestemplateIdTemplateInfoDetail.md)
+- [V2invoicingtemplatestemplateIdTemplateInfoDetailAttachments](docs/Model/V2invoicingtemplatestemplateIdTemplateInfoDetailAttachments.md)
+- [V2paymentsauthorizationsauthorizationIdcaptureAmount](docs/Model/V2paymentsauthorizationsauthorizationIdcaptureAmount.md)
+- [V3customermanagedaccountsAddresses](docs/Model/V3customermanagedaccountsAddresses.md)
+- [V3customermanagedaccountsAgreements](docs/Model/V3customermanagedaccountsAgreements.md)
+- [V3customermanagedaccountsBusinessEntity](docs/Model/V3customermanagedaccountsBusinessEntity.md)
+- [V3customermanagedaccountsBusinessEntityAddresses](docs/Model/V3customermanagedaccountsBusinessEntityAddresses.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwners](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwners.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwnersAddresses](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwnersAddresses.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwnersBirthDetails](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwnersBirthDetails.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwnersIdentificationDocuments](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwnersIdentificationDocuments.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwnersIndividuals](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwnersIndividuals.md)
+- [V3customermanagedaccountsBusinessEntityBeneficialOwnersNames](docs/Model/V3customermanagedaccountsBusinessEntityBeneficialOwnersNames.md)
+- [V3customermanagedaccountsBusinessEntityBirthDetails](docs/Model/V3customermanagedaccountsBusinessEntityBirthDetails.md)
+- [V3customermanagedaccountsBusinessEntityDeclarations](docs/Model/V3customermanagedaccountsBusinessEntityDeclarations.md)
+- [V3customermanagedaccountsBusinessEntityIdentificationDocuments](docs/Model/V3customermanagedaccountsBusinessEntityIdentificationDocuments.md)
+- [V3customermanagedaccountsBusinessEntityIdentificationDocuments1](docs/Model/V3customermanagedaccountsBusinessEntityIdentificationDocuments1.md)
+- [V3customermanagedaccountsBusinessEntityNames](docs/Model/V3customermanagedaccountsBusinessEntityNames.md)
+- [V3customermanagedaccountsBusinessEntityNames1](docs/Model/V3customermanagedaccountsBusinessEntityNames1.md)
+- [V3customermanagedaccountsBusinessEntityOfficeBearers](docs/Model/V3customermanagedaccountsBusinessEntityOfficeBearers.md)
+- [V3customermanagedaccountsBusinessEntityPhoneNumbers](docs/Model/V3customermanagedaccountsBusinessEntityPhoneNumbers.md)
+- [V3customermanagedaccountsBusinessEntityRegisteredBusinessAddress](docs/Model/V3customermanagedaccountsBusinessEntityRegisteredBusinessAddress.md)
+- [V3customermanagedaccountsIndividualOwners](docs/Model/V3customermanagedaccountsIndividualOwners.md)
+- [V3customermanagedaccountsNames](docs/Model/V3customermanagedaccountsNames.md)
+- [V3customermanagedaccountsidValue](docs/Model/V3customermanagedaccountsidValue.md)
 
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
-
-
-## Author
-
-
-
-
+All endpoints do not require authorization.
